@@ -19,7 +19,13 @@ def test_cli_version(version_cli_flag):
     assert result.output.startswith('Cibopath')
 
 
+def test_option_verbose():
+    result = runner.invoke(main, ['-v', 'update'])
+    assert result.exit_code == 0
+    assert result.output.startswith('DEBUG cli.py: update')
+
+
 def test_update():
     result = runner.invoke(main, ['update'])
     assert result.exit_code == 0
-    assert result.output.startswith('update')
+    assert 'update' in result.output
