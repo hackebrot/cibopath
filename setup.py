@@ -11,7 +11,7 @@ def read(file_name):
 
 
 setup(
-    name='Cibopath',
+    name='cibopath',
     version='0.1.0',
     author='Raphael Pierzina',
     author_email='raphael@hackebrot.de',
