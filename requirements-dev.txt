@@ -1,0 +1,4 @@
+-e .
+
+bumpversion==0.5.3
+tox==2.3.1

@@ -1,9 +1,11 @@
-.PHONY: clean-py clean-build
+.PHONY: clean-py clean-build develop test
 
 help:
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-py - remove Python file artifacts"
-	@echo "clean- remove all file artifacts"
+	@echo "clean - remove all file artifacts"
+	@echo "develop - install development dependencies"
+	@echo "test - install dev dependencies and run tests"
 
 clean: clean-tox clean-build clean-py
 
@@ -18,3 +20,9 @@ clean-build:
 clean-py:
 	find . -type f -name "*.py[co]" -delete
 	find . -type d -name "__pycache__" -delete
+
+develop:
+	pip install -r requirements-dev.txt
+
+test: develop
+	tox
