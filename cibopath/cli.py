@@ -41,12 +41,20 @@ def _show_user_config(ctx, param, value):
     ctx.exit()
 
 
+def _validate_variable(ctx, param, value):
+    try:
+        section, key = value.split('.')
+        return value
+    except ValueError:
+        raise click.BadParameter('variable needs to be in format section.key')
+
+
 @cli.command('config')
 @click.option(
     '--list', 'show_config', is_flag=True, default=False,
     is_eager=True, expose_value=False, callback=_show_user_config
 )
-@click.argument('variable')
+@click.argument('variable', callback=_validate_variable)
 @click.argument('value')
 def config_cmd(variable, value):
     user_config.set_value(variable, value)
