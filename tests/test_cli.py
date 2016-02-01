@@ -18,7 +18,7 @@ def version_cli_flag(request):
 def test_version_option(version_cli_flag):
     result = runner.invoke(main, [version_cli_flag])
     assert result.exit_code == 0
-    assert result.output.startswith('Cibopath')
+    assert result.output.startswith('cibopath')
 
 
 def test_verbose_option():

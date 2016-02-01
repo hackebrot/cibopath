@@ -13,7 +13,7 @@ from cibopath import user_config
     '-v', '--verbose',
     is_flag=True, help='Print debug information', default=False
 )
-@click.version_option(__version__, u'-V', u'--version', prog_name='Cibopath')
+@click.version_option(__version__, u'-V', u'--version', prog_name='cibopath')
 def cli(verbose):
     """Cibopath - Search Cookiecutters on GitHub."""
     if verbose:
