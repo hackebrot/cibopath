@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+import configparser
+
 from click.testing import CliRunner
 import pytest
 
@@ -29,3 +31,16 @@ def test_update():
     result = runner.invoke(main, ['update'])
     assert result.exit_code == 0
     assert 'update' in result.output
+
+
+@pytest.fixture
+def config_file(tmpdir, mocker):
+    config_path = tmpdir / 'user_config'
+    parser = configparser.RawConfigParser()
+    parser['foobar'] = {'hello': 'world'}
+
+    with config_path.open('w', encoding='utf8') as f:
+        parser.write(f)
+
+    mocker.patch('cibopath.user_config.USER_CONFIG', config_path)
+    return config_path
