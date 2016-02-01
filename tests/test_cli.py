@@ -44,3 +44,24 @@ def config_file(tmpdir, mocker):
 
     mocker.patch('cibopath.user_config.USER_CONFIG', config_path)
     return config_path
+
+
+def test_config_command_list_option(config_file):
+    result = runner.invoke(main, ['config', '--list'])
+    assert result.exit_code == 0
+
+    assert result.output == '[foobar]\nhello = world\n\n\n'
+
+
+def test_config_command_variable_value_args(config_file):
+    result = runner.invoke(main, ['config', 'abc.def', 'xyz'])
+    assert result.exit_code == 0
+
+    config_text = config_file.read_text(encoding='utf8')
+    assert config_text == '[foobar]\nhello = world\n\n[abc]\ndef = xyz\n\n'
+
+
+def test_config_command_variable_validation(config_file):
+    result = runner.invoke(main, ['config', 'abc.def.ghi', 'xyz'])
+    assert result.exit_code == 2
+    assert 'variable needs to be in format section.key' in result.output
