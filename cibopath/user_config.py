@@ -21,13 +21,12 @@ def read_config():
     return config
 
 
-def set_value(variable, value):
-    section, key = variable.split('.')
+def set_value(section, key, value):
     config = read_config()
 
     logging.debug(
-        'Set config variable "{variable}" to "{value}"'
-        ''.format(variable=variable, value=value)
+        'Set config key "{key}" of section "{section}" to "{value}"'
+        ''.format(key=key, section=section, value=value)
     )
 
     if section not in config.sections():

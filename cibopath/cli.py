@@ -44,7 +44,7 @@ def _show_user_config(ctx, param, value):
 def _validate_variable(ctx, param, value):
     try:
         section, key = value.split('.')
-        return value
+        return section, key
     except ValueError:
         raise click.BadParameter('variable needs to be in format section.key')
 
@@ -57,6 +57,6 @@ def _validate_variable(ctx, param, value):
 @click.argument('variable', callback=_validate_variable)
 @click.argument('value')
 def config_cmd(variable, value):
-    user_config.set_value(variable, value)
+    user_config.set_value(*variable, value)
 
 main = cli
