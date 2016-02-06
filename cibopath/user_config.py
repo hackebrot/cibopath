@@ -4,34 +4,43 @@ import configparser
 import logging
 import pathlib
 
-USER_CONFIG = pathlib.Path.home() / '.cibopathrc'
+logger = logging.getLogger('cibopath')
 
 
-def get_text():
-    logging.debug('Reading config file {}'.format(USER_CONFIG))
-    return USER_CONFIG.read_text(encoding='utf8')
+class UserConfig:
+    def __init__(self, file_path):
+        self.file_path = pathlib.Path(file_path).expanduser()
+        self._config = self._load_config()
 
+    @property
+    def text(self):
+        logger.debug('Reading config file {}'.format(self.file_path))
+        return self.file_path.read_text(encoding='utf8')
 
-def read_config():
-    logging.debug('Loading config file {}'.format(USER_CONFIG))
-    config = configparser.RawConfigParser()
+    def _load_config(self):
+        logger.debug('Loading config file {}'.format(self.file_path))
+        config = configparser.RawConfigParser()
 
-    with USER_CONFIG.open('r', encoding='utf8') as config_file:
-        config.read_file(config_file)
-    return config
+        with self.file_path.open('r', encoding='utf8') as config_file:
+            config.read_file(config_file)
+        return config
 
+    def set_value(self, section, key, value):
+        logger.debug(
+            'Set config key "{key}" of section "{section}" to "{value}"'
+            ''.format(key=key, section=section, value=value)
+        )
 
-def set_value(section, key, value):
-    config = read_config()
+        if section not in self._config.sections():
+            self._config[section] = {}
+        self._config[section][key] = value
 
-    logging.debug(
-        'Set config key "{key}" of section "{section}" to "{value}"'
-        ''.format(key=key, section=section, value=value)
-    )
+        with self.file_path.open('w', encoding='utf8') as config_file:
+            self._config.write(config_file)
 
-    if section not in config.sections():
-        config[section] = {}
-    config[section][key] = value
-
-    with USER_CONFIG.open('w', encoding='utf8') as config_file:
-        config.write(config_file)
+    def get_value(self, section, key):
+        logger.debug(
+            'Get config key "{key}" of section "{section}"'
+            ''.format(key=key, section=section)
+        )
+        return self._config[section][key]
