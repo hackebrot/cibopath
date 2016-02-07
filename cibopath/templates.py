@@ -25,6 +25,11 @@ class Template:
     def __repr__(self):
         return '<Template {name}>'.format(name=self.name)
 
+    def __lt__(self, other):
+        if self.__class__ is other.__class__:
+            return self.name < other.name
+        return super().__lt__(other)
+
     def __contains__(self, tag):
         return tag in self.tags
 
@@ -66,5 +71,6 @@ def dump(templates, file_path=JSON_STORE):
 
 def load(file_path=JSON_STORE):
     logger.debug('Loading templates from {}'.format(file_path))
+
     with file_path.open('r', encoding='utf8') as f:
         return json.load(f, object_hook=template_from_json)
