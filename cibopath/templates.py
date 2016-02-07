@@ -20,7 +20,7 @@ class Template:
         self.author = author
         self.repo = repo
         self.context = context
-        self.tags = sorted(tags)
+        self.tags = tags
 
     def __repr__(self):
         return '<Template {name}>'.format(name=self.name)

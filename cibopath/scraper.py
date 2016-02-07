@@ -59,5 +59,5 @@ def load_templates(username, token):
 
     for name, author, repo, context, readme in template_data:
         _, tags = readme_parser.read(readme)
-        templates.append(Template(name, author, repo, context, tags))
+        templates.append(Template(name, author, repo, context, sorted(tags)))
     return templates
