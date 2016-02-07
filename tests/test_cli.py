@@ -35,12 +35,13 @@ def test_cli_group_verbose_option(verbose_cli_flag):
     )
 
 
+@pytest.mark.skipif(True, reason='Mock out aiohttp')
 def test_update_command():
     result = runner.invoke(
-        main, ['-v', 'update', '-u', 'raphael', '-t', '1234']
+        main, ['-v', 'update', '-u', 'foobar', '-t', '1234']
     )
     assert result.exit_code == 0
-    assert 'username:raphael token:1234' in result.output
+    assert 'username:foobar token:1234' in result.output
 
 
 @pytest.fixture
