@@ -59,7 +59,7 @@ class ReadmeParser(HTMLParser):
 
     @property
     def words(self):
-        return list(self._words)
+        return [word.lower() for word in self._words]
 
 
 def read(string):
