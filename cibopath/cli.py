@@ -7,6 +7,8 @@ import click
 from cibopath import __version__
 from cibopath.user_config import UserConfig
 from cibopath.log import create_logger
+from cibopath.scraper import load_templates
+from cibopath.templates import dump
 
 
 @click.group()
@@ -58,6 +60,11 @@ def update_cmd(username, token):
         'username:{username} token:{token}'
         ''.format(username=username, token=token)
     )
+    templates = load_templates(username, token)
+
+    logger.debug('Found {} templates'.format(len(templates)))
+    dump(templates)
+    logger.debug('Successfully updated templates')
 
 
 def _show_user_config(ctx, param, value):
@@ -85,5 +92,6 @@ def _validate_variable(ctx, param, value):
 @click.argument('value')
 def config_cmd(config, variable, value):
     config.set_value(*variable, value)
+
 
 main = cli
