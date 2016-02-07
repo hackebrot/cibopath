@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import logging
-import operator
 
 import click
 
@@ -102,7 +101,7 @@ def search_cmd(tags):
 
     try:
         templates = load()
-    except FileNotFoundError as err:
+    except FileNotFoundError:
         logger.error(
             'Unable to load templates. '
             'Please run "cibopath update" first.'
