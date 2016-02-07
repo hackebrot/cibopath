@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import operator
 
 import click
 
@@ -8,7 +9,7 @@ from cibopath import __version__
 from cibopath.user_config import UserConfig
 from cibopath.log import create_logger
 from cibopath.scraper import load_templates
-from cibopath.templates import dump
+from cibopath.templates import dump, load
 
 
 @click.group()
@@ -92,6 +93,36 @@ def _validate_variable(ctx, param, value):
 @click.argument('value')
 def config_cmd(config, variable, value):
     config.set_value(*variable, value)
+
+
+@cli.command('search')
+@click.argument('tags', type=click.STRING, nargs=-1)
+def search_cmd(tags):
+    logger = logging.getLogger('cibopath')
+
+    try:
+        templates = load()
+    except FileNotFoundError as err:
+        logger.error(
+            'Unable to load templates. '
+            'Please run "cibopath update" first.'
+        )
+        return
+
+    matches = []
+    for template in templates:
+        logger.debug('Processing {}'.format(template))
+
+        if all(tag.lower() in template for tag in tags):
+            matches.append(template)
+
+    if not matches:
+        click.echo('No match for "{}"'.format(', '.join(tags)))
+        return
+
+    message = '{template.name:.<36} {template.url}'
+    for match in sorted(matches):
+        click.echo(message.format(template=match))
 
 
 main = cli
