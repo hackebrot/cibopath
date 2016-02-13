@@ -6,11 +6,6 @@ import pathlib
 
 GITHUB_URL = 'https://github.com/{user}/{repo}'
 
-TEMPLATE_DIR = pathlib.Path.home() / '.cibopath'
-TEMPLATE_DIR.mkdir(exist_ok=True)
-
-JSON_STORE = TEMPLATE_DIR / 'templates.json'
-
 logger = logging.getLogger('cibopath')
 
 
@@ -63,13 +58,13 @@ def template_from_json(json_object):
     return json_object
 
 
-def dump(templates, file_path=JSON_STORE):
+def dump(templates, file_path):
     logger.debug('Dumping templates to {}'.format(file_path))
     with file_path.open('w', encoding='utf8') as f:
         json.dump(templates, f, default=template_to_json)
 
 
-def load(file_path=JSON_STORE):
+def load(file_path):
     logger.debug('Loading templates from {}'.format(file_path))
 
     with file_path.open('r', encoding='utf8') as f:

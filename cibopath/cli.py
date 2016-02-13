@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import pathlib
 
 import click
 
@@ -36,7 +37,15 @@ def cli(ctx, verbose, config_file):
 
 
 @click.pass_obj
-def _default_username(config):
+def _templates_file(config):
+    try:
+        return config.get_value('templates', 'file')
+    except KeyError:
+        return None
+
+
+@click.pass_obj
+def _username(config):
     try:
         return config.get_value('github', 'username')
     except KeyError:
@@ -44,7 +53,7 @@ def _default_username(config):
 
 
 @click.pass_obj
-def _default_token(config):
+def _token(config):
     try:
         return config.get_value('github', 'token')
     except KeyError:
@@ -52,18 +61,25 @@ def _default_token(config):
 
 
 @cli.command('update')
-@click.option('-u', '--username', required=True, default=_default_username)
-@click.option('-t', '--token', required=True, default=_default_token)
-def update_cmd(username, token):
+@click.option('-u', '--username', required=True, default=_username)
+@click.option('-t', '--token', required=True, default=_token)
+@click.option(
+    '-d', '--dump-file',
+    required=True, default=_templates_file, type=click.Path()
+)
+def update_cmd(username, token, dump_file):
     logger = logging.getLogger('cibopath')
-    logger.debug(
-        'username:{username} token:{token}'
-        ''.format(username=username, token=token)
-    )
+    logger.debug('username: {}'.format(username))
+    logger.debug('token: {}'.format(token))
+
+    dump_file = pathlib.Path(dump_file).expanduser()
+    dump_dir = dump_file.parent.mkdir(parents=True, exist_ok=True)
+    logger.debug('dump_file: {}'.format(dump_file))
+
     templates = load_templates(username, token)
 
     logger.debug('Found {} templates'.format(len(templates)))
-    dump(templates)
+    dump(templates, dump_file)
     logger.debug('Successfully updated templates')
 
 
@@ -95,12 +111,17 @@ def config_cmd(config, variable, value):
 
 
 @cli.command('search')
+@click.option(
+    '-l', '--load-file',
+    required=True, default=_templates_file, type=click.Path()
+)
 @click.argument('tags', type=click.STRING, nargs=-1)
-def search_cmd(tags):
+def search_cmd(load_file, tags):
     logger = logging.getLogger('cibopath')
 
+    load_file = pathlib.Path(load_file).expanduser()
     try:
-        templates = load()
+        templates = load(load_file)
     except FileNotFoundError:
         logger.error(
             'Unable to load templates. '
