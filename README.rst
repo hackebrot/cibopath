@@ -4,6 +4,27 @@ Cibopath
 
 Search Cookiecutters on GitHub.
 
+Usage
+-----
+
+.. code-block:: text
+
+	Usage: cibopath [OPTIONS] COMMAND [ARGS]...
+
+	  Cibopath - Search Cookiecutters on GitHub.
+
+	Options:
+	  -v, --verbose           Print debug information
+	  -c, --config-file PATH  Config file to hold settings
+	  -V, --version           Show the version and exit.
+	  --help                  Show this message and exit.
+
+	Commands:
+	  config
+	  search
+	  update
+
+
 License
 -------
 
