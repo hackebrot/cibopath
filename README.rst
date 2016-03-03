@@ -5,7 +5,7 @@ Cibopath
 Search Cookiecutters on GitHub.
 
 Usage
------
+=====
 
 .. code-block:: text
 
@@ -53,13 +53,13 @@ Feel free to view the contents of the config file via:
 
 
 License
--------
+=======
 
 Distributed under the terms of the `BSD 3-Clause License`_, Cibopath is free
 and open source software
 
 Code of Conduct
----------------
+===============
 
 Everyone interacting in the Cibopath project's codebases, issue trackers, chat
 rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
