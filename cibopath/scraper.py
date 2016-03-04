@@ -10,8 +10,6 @@ from cibopath.templates import Template
 
 logger = logging.getLogger('cibopath')
 
-JSON_STORE = 'templates.json'
-
 
 class CibopathError(Exception):
     """Custom error class for the app."""
