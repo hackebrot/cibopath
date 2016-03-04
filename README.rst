@@ -75,6 +75,34 @@ Or specify it on the CLI:
 Please note that, albeit not required, the ``-v`` or ``--verbose`` is very
 useful if you want to see what Cibopath is doing under the hood.
 
+Search
+------
+
+Once you've gathered information about Cookiecutter templates, you can use
+Cibopath to search for keywords in the templates' ``README`` files.
+
+Let's say you would like to know which ones support *django* and *docker*.
+
+.. code-block:: bash
+
+	$ cibopath search django docker
+
+If you didn't save the **templates.file** earlier, you need to explictly pass
+it to the CLI:
+
+.. code-block:: bash
+
+	$ cibopath search django docker --load-file ~/.cibopath/templates.json
+
+Cibopath will show you a list of matching templates in alphabetical order along
+with their corresponding GitHub repository URL.
+
+.. code-block:: bash
+
+	cookiecutter-django................. https://github.com/pydanny/cookiecutter-django
+	django-docker-bootstrap............. https://github.com/legios89/django-docker-bootstrap
+
+
 License
 =======
 
