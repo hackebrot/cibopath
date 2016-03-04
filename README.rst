@@ -2,7 +2,7 @@
 Cibopath
 ========
 
-Search Cookiecutters on GitHub.
+Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
 Usage
 =====
@@ -59,7 +59,7 @@ With GitHub authentication in place, you now want to fetch information about
 available Cookiecutter templates. Cibopath dumps the data as a JSON file to
 disk. You can specify the target location either via user config or CLI.
 
-Save dump-file location to settings:
+Save the dump-file location to settings:
 
 .. code-block:: bash
 
@@ -72,8 +72,8 @@ Or specify it on the CLI:
 
 	$ cibopath -v update --dump-file ~/.cibopath/templates.json
 
-Please note that, albeit not required, the ``-v`` or ``--verbose`` is very
-useful if you want to see what Cibopath is doing under the hood.
+Please note that, albeit not required, the ``-v`` or ``--verbose`` flags are
+very useful if you want to see what Cibopath is doing under the hood.
 
 Search
 ------
