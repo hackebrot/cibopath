@@ -70,8 +70,10 @@ Or specify it on the CLI:
 
 .. code-block:: bash
 
-	$ cibopath -v update --dump-file=~/.cibopath/templates.json
+	$ cibopath -v update --dump-file ~/.cibopath/templates.json
 
+Please note that, albeit not required, the ``-v`` or ``--verbose`` is very
+useful if you want to see what Cibopath is doing under the hood.
 
 License
 =======
