@@ -79,7 +79,7 @@ Search
 ------
 
 Once you've gathered information about Cookiecutter templates, you can use
-Cibopath to search for keywords in the templates' ``README`` files.
+Cibopath to search for keywords in the templates' **README** files.
 
 Let's say you would like to know which ones support *django* and *docker*.
 
@@ -87,7 +87,7 @@ Let's say you would like to know which ones support *django* and *docker*.
 
 	$ cibopath search django docker
 
-If you didn't save the **templates.file** earlier, you need to explictly pass
+If you didn't save the ``templates.file`` earlier, you need to explictly pass
 it to the CLI:
 
 .. code-block:: bash
@@ -95,7 +95,9 @@ it to the CLI:
 	$ cibopath search django docker --load-file ~/.cibopath/templates.json
 
 Cibopath will show you a list of matching templates in alphabetical order along
-with their corresponding GitHub repository URL.
+with their corresponding GitHub repository URL. If you feel like one of these
+templates meets your requirements for a new project, go ahead and pass the URL
+to `Cookiecutter`_ to get started.
 
 .. code-block:: bash
 
@@ -122,3 +124,4 @@ rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
 .. _`PyPA Code of Conduct`: https://www.pypa.io/en/latest/code-of-conduct/
 .. _`create a GitHub access token`: https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 .. _`scopes`: https://developer.github.com/v3/oauth/#scopes
+.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
