@@ -52,6 +52,27 @@ Feel free to view the contents of the config file via:
     $ cibopath -v config --list
 
 
+Update
+------
+
+With GitHub authentication in place, you now want to fetch information about
+available Cookiecutter templates. Cibopath dumps the data as a JSON file to
+disk. You can specify the target location either via user config or CLI.
+
+Save dump-file location to settings:
+
+.. code-block:: bash
+
+	$ cibopath config templates.file ~/.cibopath/templates.json
+	$ cibopath -v update
+
+Or specify it on the CLI:
+
+.. code-block:: bash
+
+	$ cibopath -v update --dump-file=~/.cibopath/templates.json
+
+
 License
 =======
 
