@@ -2,7 +2,6 @@
 
 import json
 import logging
-import pathlib
 
 GITHUB_URL = 'https://github.com/{user}/{repo}'
 

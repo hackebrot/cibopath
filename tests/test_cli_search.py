@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import pathlib
-import json
-
 import pytest
 
 
