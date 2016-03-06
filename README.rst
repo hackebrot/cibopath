@@ -4,10 +4,11 @@ Cibopath
 
 Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
-> A Cibopath can take a bite from anything and get a psychic sensation of what
-has happened to that object. The only thing it does not work on is beets.
+    A Cibopath can take a bite from anything and get a psychic sensation of
+    what has happened to that object. The only thing it does not work on is
+    beets.
 
-Source: `Wikipedia: Chew Comics`_
+    Source: `Wikipedia: Chew Comics`_
 
 
 Usage
