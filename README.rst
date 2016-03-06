@@ -105,6 +105,46 @@ to `Cookiecutter`_ to get started.
 	cookiecutter-django................. https://github.com/pydanny/cookiecutter-django
 	django-docker-bootstrap............. https://github.com/legios89/django-docker-bootstrap
 
+Info
+----
+
+Cibopath also provides more additional information about a given template:
+
+.. code-block:: bash
+
+	$ cibopath info cookiecutter-pytest-plugin
+
+Info includes **Name**, **Author**, **Repository** as well as the **Context**
+which will be used by `Cookiecutter`_ to generate the project.
+
+.. code-block:: text
+
+	Name: cookiecutter-pytest-plugin
+	Author: pytest-dev
+	Repository: https://github.com/pytest-dev/cookiecutter-pytest-plugin
+	Context: {
+		"docs_tool": [
+			"mkdocs",
+			"sphinx",
+			"none"
+		],
+		"email": "raphael@hackebrot.de",
+		"full_name": "Raphael Pierzina",
+		"github_username": "hackebrot",
+		"license": [
+			"MIT",
+			"BSD-3",
+			"GNU GPL v3.0",
+			"Apache Software License 2.0"
+		],
+		"module_name": "{{ cookiecutter.plugin_name|lower|replace('-', '_') }}",
+		"plugin_name": "foobar",
+		"pytest_version": "2.8.1",
+		"short_description": "A simple plugin to use with Pytest",
+		"version": "0.1.0",
+		"year": "2015"
+	}
+
 
 License
 =======
