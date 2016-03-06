@@ -4,6 +4,12 @@ Cibopath
 
 Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
+> A Cibopath can take a bite from anything and get a psychic sensation of what
+has happened to that object. The only thing it does not work on is beets.
+
+Source: `Wikipedia: Chew Comics`_
+
+
 Usage
 =====
 
@@ -160,9 +166,10 @@ rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
 
 .. _`BSD 3-Clause License`: LICENSE
 .. _`Cookiecutter templates`: https://github.com/audreyr/cookiecutter#available-cookiecutters
+.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`GitHub API v3`: https://developer.github.com/v3/
 .. _`GitHub's rate limiting`: https://developer.github.com/v3/#rate-limiting
 .. _`PyPA Code of Conduct`: https://www.pypa.io/en/latest/code-of-conduct/
+.. _`Wikipedia: Chew Comics`: https://en.wikipedia.org/wiki/Chew_%28comics%29#Cibopath
 .. _`create a GitHub access token`: https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 .. _`scopes`: https://developer.github.com/v3/oauth/#scopes
-.. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
