@@ -1,0 +1,143 @@
+<div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-cookiecutter-django" class="anchor" href="#cookiecutter-django" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>cookiecutter-django</h1>
+<a href="https://requires.io/github/pydanny/cookiecutter-django/requirements/?branch=master"><img alt="Requirements Status" src="https://camo.githubusercontent.com/8f42138d363b24e1213f6328b78c5e68fc8cc524/68747470733a2f2f72657175697265732e696f2f6769746875622f707964616e6e792f636f6f6b69656375747465722d646a616e676f2f726571756972656d656e74732e7376673f6272616e63683d6d6173746572" data-canonical-src="https://requires.io/github/pydanny/cookiecutter-django/requirements.svg?branch=master" style="max-width:100%;"></a>
+<a href="https://travis-ci.org/pydanny/cookiecutter-django?branch=master"><img alt="Build Status" src="https://camo.githubusercontent.com/c3c1df5fd9c3384a4d74087c06eaa522d285fac6/68747470733a2f2f7472617669732d63692e6f72672f707964616e6e792f636f6f6b69656375747465722d646a616e676f2e7376673f6272616e63683d6d6173746572" data-canonical-src="https://travis-ci.org/pydanny/cookiecutter-django.svg?branch=master" style="max-width:100%;"></a>
+<a href="https://gitter.im/pydanny/cookiecutter-django?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://camo.githubusercontent.com/d705225d4c639377d4ceb7cb8d751df9a21219d2/68747470733a2f2f6261646765732e6769747465722e696d2f4a6f696e436861742e737667" data-canonical-src="https://badges.gitter.im/JoinChat.svg" style="max-width:100%;">
+</a>
+<p>A <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> template for Django.</p>
+<a name="user-content-features"></a>
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Features</h2>
+<ul>
+<li>For Django 1.9</li>
+<li>Renders Django projects with 100% starting test coverage</li>
+<li>Twitter <a href="https://github.com/twbs/bootstrap">Bootstrap</a> v4.0.0 - <a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/">alpha</a></li>
+<li>End-to-end via <a href="https://github.com/hitchtest/hitchtest">Hitch</a></li>
+<li><a href="https://github.com/angular/angular.js">AngularJS</a></li>
+<li><a href="http://12factor.net/">12-Factor</a> based settings via <a href="https://github.com/joke2k/django-environ">django-environ</a></li>
+<li>Optimized development and production settings</li>
+<li>Registration via <a href="https://github.com/pennersr/django-allauth">django-allauth</a></li>
+<li>Comes with custom user model ready to go.</li>
+<li>Grunt build for compass and livereload</li>
+<li>Basic e-mail configurations for sending emails via <a href="https://mailgun.com/">Mailgun</a></li>
+<li>Media storage using Amazon S3</li>
+<li>Docker support using <a href="https://www.github.com/docker/compose">docker-compose</a> for development and production</li>
+<li><a href="https://devcenter.heroku.com/articles/procfile">Procfile</a> for deploying to Heroku</li>
+<li>Works with Python 2.7.x or 3.5.x!</li>
+<li>Run tests with unittest or py.test!</li>
+</ul>
+<a name="user-content-optional-integrations"></a>
+<h2><a id="user-content-optional-integrations" class="anchor" href="#optional-integrations" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Optional Integrations</h2>
+<p><em>These features can be enabled during initial project setup.</em></p>
+<ul>
+<li>Serve static files from Amazon S3 or <a href="https://whitenoise.readthedocs.org/">Whitenoise</a></li>
+<li>Configuration for <a href="http://www.celeryproject.org/">Celery</a></li>
+<li>Integration with <a href="https://github.com/mailhog/MailHog">MailHog</a> for local email testing</li>
+<li>Integration with <a href="https://getsentry.com">Sentry</a> for error logging</li>
+<li>Integration with <a href="https://newrelic.com">NewRelic</a> for performance monitoring</li>
+<li>Integration with <a href="https://opbeat.com/">Opbeat</a> for performance monitoring</li>
+</ul>
+<a name="user-content-constraints"></a>
+<h2><a id="user-content-constraints" class="anchor" href="#constraints" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Constraints</h2>
+<ul>
+<li>Only maintained 3rd party libraries are used.</li>
+<li>PostgreSQL everywhere (9.0+)</li>
+<li>Environment variables for configuration (This won't work with Apache/mod_wsgi).</li>
+</ul>
+<a name="user-content-usage"></a>
+<h2><a id="user-content-usage" class="anchor" href="#usage" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Usage</h2>
+<p>Let's pretend you want to create a Django project called "redditclone". Rather than using startproject
+and then editing the results to include your name, email, and various configuration issues that always get forgotten until the worst possible moment, get <a href="https://github.com/audreyr/cookiecutter">cookiecutter</a> to do all the work.</p>
+<p>First, get cookiecutter. Trust me, it's awesome:</p>
+<pre>$ pip install cookiecutter
+</pre>
+<p>Now run it against this repo:</p>
+<pre>$ cookiecutter https://github.com/pydanny/cookiecutter-django.git
+</pre>
+<p>You'll be prompted for some questions, answer them, then it will create a Django project for you.</p>
+<p><strong>Warning</strong>: After this point, change 'Daniel Greenfeld', 'pydanny', etc to your own information.</p>
+<p><strong>Warning</strong>: repo_name must be a valid Python module name or you will have issues on imports.</p>
+<p>It prompts you for questions. Answer them:</p>
+<pre>Cloning into 'cookiecutter-django'...
+remote: Counting objects: 550, done.
+remote: Compressing objects: 100% (310/310), done.
+remote: Total 550 (delta 283), reused 479 (delta 222)
+Receiving objects: 100% (550/550), 127.66 KiB | 58 KiB/s, done.
+Resolving deltas: 100% (283/283), done.
+project_name [project_name]: Reddit Clone
+repo_name [Reddit_Clone]: reddit
+author_name [Your Name]: Daniel Greenfeld
+email [Your email]: pydanny@gmail.com
+description [A short description of the project.]: A reddit clone.
+domain_name [example.com]: myreddit.com
+version [0.1.0]: 0.0.1
+timezone [UTC]:
+now [2016/03/01]: 2016/03/05
+year [2015]:
+use_whitenoise [y]: n
+use_celery [n]: y
+use_mailhog [n]: n
+use_sentry [n]: y
+use_newrelic [n]: y
+use_opbeat [n]: y
+windows [n]: n
+use_python2 [n]: y
+Select open_source_license:
+1 - MIT
+2 - BSD
+3 - Not open source
+Choose from 1, 2, 3 [1]: 1
+</pre>
+<p>Enter the project and take a look around:</p>
+<pre>$ cd reddit/
+$ ls
+</pre>
+<p>Create a GitHub repo and push it there:</p>
+<pre>$ git init
+$ git add .
+$ git commit -m "first awesome commit"
+$ git remote add origin git@github.com:pydanny/redditclone.git
+$ git push -u origin master
+</pre>
+<p>Now take a look at your repo. Don't forget to carefully look at the generated README. Awesome, right?</p>
+<p>For development, see the following for local development:</p>
+<ul>
+<li><a href="http://cookiecutter-django.readthedocs.org/en/latest/developing-locally.html">Developing locally</a></li>
+<li><a href="http://cookiecutter-django.readthedocs.org/en/latest/developing-locally-docker.html">Developing locally using docker</a></li>
+</ul>
+<a name="user-content-articles"></a>
+<h2><a id="user-content-articles" class="anchor" href="#articles" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Articles</h2>
+<ul>
+<li><a href="https://realpython.com/blog/python/development-and-deployment-of-cookiecutter-django-via-docker">Development and Deployment of Cookiecutter-Django via Docker</a></li>
+<li><a href="https://realpython.com/blog/python/development-and-deployment-of-cookiecutter-django-on-fedora/">Development and Deployment of Cookiecutter-Django on Fedora</a></li>
+</ul>
+<a name="user-content-support-this-project"></a>
+<h2><a id="user-content-support-this-project" class="anchor" href="#support-this-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Support This Project</h2>
+<p>This project is maintained by volunteers. Support their efforts by spreading the word about:</p>
+<a href="http://www.twoscoops.academy/"><img alt="Two Scoops Academy" id="user-content-two-scoops-academy" src="https://camo.githubusercontent.com/12b455e11953a11934b49612a5e81b6c09112eec/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f747361636164656d792f696d616765732f7473612d6c6f676f2d3235307836302d7472616e73706172656e742d30312e706e67" data-canonical-src="https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png" style="max-width:100%;"></a>
+<a name="user-content-for-readers-of-two-scoops-of-django-1-8"></a>
+<h2><a id="user-content-for-readers-of-two-scoops-of-django-18" class="anchor" href="#for-readers-of-two-scoops-of-django-18" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>For Readers of Two Scoops of Django 1.8</h2>
+<p>You may notice that some elements of this project do not exactly match what we describe in chapter 3. The reason for that is this project, amongst other things, serves as a test bed for trying out new ideas and concepts. Sometimes they work, sometimes they don't, but the end result is that it won't necessarily match precisely what is described in the book I co-authored.</p>
+<a name="user-content-your-stuff"></a>
+<h2><a id="user-content-your-stuff" class="anchor" href="#your-stuff" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>"Your Stuff"</h2>
+<p>Scattered throughout the Python and HTML of this project are places marked with "your stuff". This is where third-party libraries are to be integrated with your project.</p>
+<a name="user-content-releases"></a>
+<h2><a id="user-content-releases" class="anchor" href="#releases" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Releases</h2>
+<p>Want a stable release? You can find them at <a href="https://github.com/pydanny/cookiecutter-django/releases">https://github.com/pydanny/cookiecutter-django/releases</a></p>
+<a name="user-content-not-exactly-what-you-want"></a>
+<h2><a id="user-content-not-exactly-what-you-want" class="anchor" href="#not-exactly-what-you-want" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Not Exactly What You Want?</h2>
+<p>This is what I want. <em>It might not be what you want.</em> Don't worry, you have options:</p>
+<a name="user-content-fork-this"></a>
+<h3><a id="user-content-fork-this" class="anchor" href="#fork-this" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Fork This</h3>
+<p>If you have differences in your preferred setup, I encourage you to fork this to create your own version.
+Once you have your fork working, let me know and I'll add it to a '<em>Similar Cookiecutter Templates</em>' list here.
+It's up to you whether or not to rename your fork.</p>
+<p>If you do rename your fork, I encourage you to submit it to the following places:</p>
+<ul>
+<li><a href="https://github.com/audreyr/cookiecutter">cookiecutter</a> so it gets listed in the README as a template.</li>
+<li>The cookiecutter <a href="https://www.djangopackages.com/grids/g/cookiecutters/">grid</a> on Django Packages.</li>
+</ul>
+<a name="user-content-or-submit-a-pull-request"></a>
+<h3><a id="user-content-or-submit-a-pull-request" class="anchor" href="#or-submit-a-pull-request" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Or Submit a Pull Request</h3>
+<p>I also accept pull requests on this, if they're small, atomic, and if they make my own project development
+experience better.</p>
+
+</article></div>

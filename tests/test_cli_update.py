@@ -23,5 +23,6 @@ def test_store_template_data_to_json(cli_runner, tmp_rc, tmp_templates_file):
         'cookiecutter-pylibrary',
         'cookiecutter-pytest-plugin',
         'cookiecutter-tapioca',
+        'cookiecutter-django',
     ]
     assert fetched_templates == expected_templates
