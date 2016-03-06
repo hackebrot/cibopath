@@ -73,7 +73,7 @@ def update_cmd(username, token, dump_file):
     logger.debug('token: {}'.format(token))
 
     dump_file = pathlib.Path(dump_file).expanduser()
-    dump_dir = dump_file.parent.mkdir(parents=True, exist_ok=True)
+    dump_file.parent.mkdir(parents=True, exist_ok=True)
     logger.debug('dump_file: {}'.format(dump_file))
 
     templates = load_templates(username, token)
@@ -110,24 +110,27 @@ def config_cmd(config, variable, value):
     config.set_value(*variable, value)
 
 
+def _validate_load_file(ctx, param, value):
+    load_file = pathlib.Path(value).expanduser()
+    if not load_file.is_file():
+        raise click.FileError(
+            str(load_file),
+            'Please run "cibopath update first.'
+        )
+    return load_file
+
+
 @cli.command('search')
 @click.option(
     '-l', '--load-file',
-    required=True, default=_templates_file, type=click.Path()
+    required=True, default=_templates_file,
+    type=click.Path(), callback=_validate_load_file
 )
 @click.argument('tags', type=click.STRING, nargs=-1)
 def search_cmd(load_file, tags):
     logger = logging.getLogger('cibopath')
 
-    load_file = pathlib.Path(load_file).expanduser()
-    try:
-        templates = load(load_file)
-    except FileNotFoundError:
-        logger.error(
-            'Unable to load templates. '
-            'Please run "cibopath update" first.'
-        )
-        return
+    templates = load(load_file)
 
     matches = []
     for template in templates:
