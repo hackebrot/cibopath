@@ -2,6 +2,7 @@
 
 import logging
 import pathlib
+import json
 
 import click
 
@@ -135,7 +136,6 @@ def search_cmd(load_file, tags):
     matches = []
     for template in templates:
         logger.debug('Processing {}'.format(template))
-
         if all(tag.lower() in template for tag in tags):
             matches.append(template)
 
@@ -146,6 +146,28 @@ def search_cmd(load_file, tags):
     message = '{template.name:.<36} {template.url}'
     for match in sorted(matches):
         click.echo(message.format(template=match))
+
+
+@cli.command('info')
+@click.option(
+    '-l', '--load-file',
+    required=True, default=_templates_file,
+    type=click.Path(), callback=_validate_load_file
+)
+@click.argument('name', type=click.STRING)
+def search_cmd(load_file, name):
+    logger = logging.getLogger('cibopath')
+
+    templates = [t for t in load(load_file) if t.name == name]
+
+    for template in templates:
+        logger.debug('Info for {}'.format(template))
+        click.echo('Name: {}'.format(template.name))
+        click.echo('Author: {}'.format(template.author))
+        click.echo('Repository: {}'.format(template.url))
+
+        context = json.dumps(template.context, indent=4, sort_keys=True)
+        click.echo('Context: {}'.format(context))
 
 
 main = cli
