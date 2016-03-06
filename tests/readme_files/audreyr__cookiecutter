@@ -1,0 +1,229 @@
+<div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-cookiecutter" class="anchor" href="#cookiecutter" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Cookiecutter</h1>
+<a href="https://pypi.python.org/pypi/cookiecutter"><img src="https://camo.githubusercontent.com/d78cee389e0cb1a79aab3baef56eea55270f9932/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f636f6f6b69656375747465722e737667" data-canonical-src="https://img.shields.io/pypi/v/cookiecutter.svg" style="max-width:100%;">
+</a>
+<a href="https://travis-ci.org/audreyr/cookiecutter"><img alt="https://travis-ci.org/audreyr/cookiecutter.png?branch=master" src="https://camo.githubusercontent.com/5fa26bbf1bfa26c413390b92cf1e8512f93c1647/68747470733a2f2f7472617669732d63692e6f72672f617564726579722f636f6f6b69656375747465722e706e673f6272616e63683d6d6173746572" data-canonical-src="https://travis-ci.org/audreyr/cookiecutter.png?branch=master" style="max-width:100%;"></a>
+<a href="https://ci.appveyor.com/project/audreyr/cookiecutter/branch/master"><img alt="https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter?branch=master" src="https://camo.githubusercontent.com/72b31c9a4b4d466bd7c056870774a6c168017540/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f6769746875622f617564726579722f636f6f6b69656375747465723f6272616e63683d6d6173746572" data-canonical-src="https://ci.appveyor.com/api/projects/status/github/audreyr/cookiecutter?branch=master" style="max-width:100%;"></a>
+<a href="https://pypi.python.org/pypi/cookiecutter"><img src="https://camo.githubusercontent.com/ce931cc43e61d73fa791e37144372a3f57106b1c/68747470733a2f2f696d672e736869656c64732e696f2f707970692f646d2f636f6f6b69656375747465722e737667" data-canonical-src="https://img.shields.io/pypi/dm/cookiecutter.svg" style="max-width:100%;">
+</a>
+<a href="https://codecov.io/github/audreyr/cookiecutter?branch=master"><img alt="https://codecov.io/github/audreyr/cookiecutter/coverage.svg?branch=master" src="https://camo.githubusercontent.com/0935df4994ced08a86e2f9094e7a800d39bc056d/68747470733a2f2f636f6465636f762e696f2f6769746875622f617564726579722f636f6f6b69656375747465722f636f7665726167652e7376673f6272616e63683d6d6173746572" data-canonical-src="https://codecov.io/github/audreyr/cookiecutter/coverage.svg?branch=master" style="max-width:100%;"></a>
+<a href="https://gitter.im/audreyr/cookiecutter?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://camo.githubusercontent.com/d705225d4c639377d4ceb7cb8d751df9a21219d2/68747470733a2f2f6261646765732e6769747465722e696d2f4a6f696e436861742e737667" data-canonical-src="https://badges.gitter.im/JoinChat.svg" style="max-width:100%;">
+</a>
+<a href="https://readthedocs.org/projects/cookiecutter/?badge=latest"><img alt="Documentation Status" src="https://camo.githubusercontent.com/97d2f9e7d3fe38d7925206fce81655e9da6da56a/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f636f6f6b69656375747465722f62616467652f3f76657273696f6e3d6c6174657374" data-canonical-src="https://readthedocs.org/projects/cookiecutter/badge/?version=latest" style="max-width:100%;"></a>
+<a href="https://landscape.io/github/audreyr/cookiecutter/master"><img alt="Code Health" src="https://camo.githubusercontent.com/ec247e847fb746ce5094738cb0ee549ce029d7ec/68747470733a2f2f6c616e6473636170652e696f2f6769746875622f617564726579722f636f6f6b69656375747465722f6d61737465722f6c616e6473636170652e7376673f7374796c653d666c6174" data-canonical-src="https://landscape.io/github/audreyr/cookiecutter/master/landscape.svg?style=flat" style="max-width:100%;"></a>
+<a href="https://scrutinizer-ci.com/g/audreyr/cookiecutter/?branch=master"><img alt="Scrutinizer Code Quality" src="https://camo.githubusercontent.com/d1b8041fddfd38a15dbc3983ba0cebbba94c4ef4/68747470733a2f2f696d672e736869656c64732e696f2f7363727574696e697a65722f672f617564726579722f636f6f6b69656375747465722e737667" data-canonical-src="https://img.shields.io/scrutinizer/g/audreyr/cookiecutter.svg" style="max-width:100%;">
+</a>
+<p>A command-line utility that creates projects from <strong>cookiecutters</strong> (project
+templates), e.g. creating a Python package project from a Python package project template.</p>
+<ul>
+<li>Documentation: <a href="http://cookiecutter.rtfd.org">http://cookiecutter.rtfd.org</a></li>
+<li>GitHub: <a href="https://github.com/audreyr/cookiecutter">https://github.com/audreyr/cookiecutter</a></li>
+<li>Free software: BSD license</li>
+<li>PyPI: <a href="https://pypi.python.org/pypi/cookiecutter">https://pypi.python.org/pypi/cookiecutter</a></li>
+</ul>
+<a href="https://camo.githubusercontent.com/051a1c163435ca7f03cecf7ed03b0a5914e7cee9/68747470733a2f2f7261772e6769746875622e636f6d2f617564726579722f636f6f6b69656375747465722f616133303962373362646339373437383862613236356438343361363562623934633265363038652f636f6f6b69656375747465725f6d656469756d2e706e67" target="_blank"><img alt="https://raw.github.com/audreyr/cookiecutter/aa309b73bdc974788ba265d843a65bb94c2e608e/cookiecutter_medium.png" src="https://camo.githubusercontent.com/051a1c163435ca7f03cecf7ed03b0a5914e7cee9/68747470733a2f2f7261772e6769746875622e636f6d2f617564726579722f636f6f6b69656375747465722f616133303962373362646339373437383862613236356438343361363562623934633265363038652f636f6f6b69656375747465725f6d656469756d2e706e67" data-canonical-src="https://raw.github.com/audreyr/cookiecutter/aa309b73bdc974788ba265d843a65bb94c2e608e/cookiecutter_medium.png" style="max-width:100%;"></a>
+<a name="user-content-features"></a>
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Features</h2>
+<p>Did someone say features?</p>
+<ul>
+<li><p>Cross-platform: Windows, Mac, and Linux are officially supported.</p>
+</li>
+<li><p>Works with Python 2.7, 3.3, 3.4, 3.5, and PyPy. <em>(But you don't have to know/write Python
+code to use Cookiecutter.)</em></p>
+</li>
+<li><p>Project templates can be in any programming language or markup format:
+Python, JavaScript, Ruby, CoffeeScript, RST, Markdown, CSS, HTML, you name
+it. You can use multiple languages in the same project template.</p>
+</li>
+<li><p>Simple command line usage:</p>
+<blockquote>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Create project from the cookiecutter-pypackage.git repo template</span>
+<span class="pl-c"># You'll be prompted to enter values.</span>
+<span class="pl-c"># Then it'll create your Python package in the current working directory,</span>
+<span class="pl-c"># based on those values.</span>
+$ cookiecutter https://github.com/audreyr/cookiecutter-pypackage
+<span class="pl-c"># For the sake of brevity, repos on GitHub can just use the 'gh' prefix</span>
+$ cookiecutter gh:audreyr/cookiecutter-pypackage</pre></div>
+</blockquote>
+</li>
+<li><p>Can also use it at the command line with a local template:</p>
+<blockquote>
+<div class="highlight highlight-source-shell"><pre><span class="pl-c"># Create project in the current working directory, from the local</span>
+<span class="pl-c"># cookiecutter-pypackage/ template</span>
+$ cookiecutter cookiecutter-pypackage/</pre></div>
+</blockquote>
+</li>
+<li><p>Or use it from Python:</p>
+<blockquote>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">from</span> cookiecutter.main <span class="pl-k">import</span> cookiecutter
+
+<span class="pl-c"># Create project from the cookiecutter-pypackage/ template</span>
+cookiecutter(<span class="pl-s"><span class="pl-pds">'</span>cookiecutter-pypackage/<span class="pl-pds">'</span></span>)
+
+<span class="pl-c"># Create project from the cookiecutter-pypackage.git repo template</span>
+cookiecutter(<span class="pl-s"><span class="pl-pds">'</span>https://github.com/audreyr/cookiecutter-pypackage.git<span class="pl-pds">'</span></span>)</pre></div>
+</blockquote>
+</li>
+<li><p>Directory names and filenames can be templated. For example:</p>
+<pre>{{cookiecutter.repo_name}}/{{cookiecutter.repo_name}}/{{cookiecutter.repo_name}}.py
+</pre>
+</li>
+<li><p>Supports unlimited levels of directory nesting.</p>
+</li>
+<li><p>100% of templating is done with Jinja2. This includes file and directory names.</p>
+</li>
+<li><p>Simply define your template variables in a cookiecutter.json file. For example:</p>
+<blockquote>
+<div class="highlight highlight-source-json"><pre>{
+    <span class="pl-s"><span class="pl-pds">"</span>full_name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Audrey Roy<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>email<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>audreyr@gmail.com<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>project_name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Complexity<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>repo_name<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>complexity<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>project_short_description<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>Refreshingly simple static site generator.<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>release_date<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2013-07-10<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>year<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>2013<span class="pl-pds">"</span></span>,
+    <span class="pl-s"><span class="pl-pds">"</span>version<span class="pl-pds">"</span></span>: <span class="pl-s"><span class="pl-pds">"</span>0.1.1<span class="pl-pds">"</span></span>
+}</pre></div>
+</blockquote>
+</li>
+<li><p>Unless you suppress it with --no-input, you are prompted for input:</p>
+<ul>
+<li>Prompts are the keys in cookiecutter.json.</li>
+<li>Default responses are the values in cookiecutter.json.</li>
+<li>Prompts are shown in order.</li>
+</ul>
+</li>
+<li><p>Cross-platform support for ~/.cookiecutterrc files:</p>
+<blockquote>
+<div class="highlight highlight-source-yaml"><pre><span class="pl-s"><span class="pl-ent">default_context:</span></span>
+    <span class="pl-s"><span class="pl-ent">full_name:</span> <span class="pl-s"><span class="pl-pds">"</span>Audrey Roy<span class="pl-pds">"</span></span></span>
+    <span class="pl-s"><span class="pl-ent">email:</span> <span class="pl-s"><span class="pl-pds">"</span>audreyr@gmail.com<span class="pl-pds">"</span></span></span>
+    <span class="pl-s"><span class="pl-ent">github_username:</span> <span class="pl-s"><span class="pl-pds">"</span>audreyr<span class="pl-pds">"</span></span></span>
+<span class="pl-s"><span class="pl-ent">cookiecutters_dir:</span> <span class="pl-s"><span class="pl-pds">"</span>~/.cookiecutters/<span class="pl-pds">"</span></span></span></pre></div>
+</blockquote>
+</li>
+<li><p>Cookiecutters (cloned Cookiecutter project templates) are put into
+~/.cookiecutters/ by default, or cookiecutters_dir if specified.</p>
+</li>
+<li><p>You can use local cookiecutters, or remote cookiecutters directly from Git
+repos or from Mercurial repos on Bitbucket.</p>
+</li>
+<li><p>Default context: specify key/value pairs that you want used as defaults
+whenever you generate a project</p>
+</li>
+<li><p>Direct access to the Cookiecutter API allows for injection of extra context.</p>
+</li>
+<li><p>Pre- and post-generate hooks: Python or shell scripts to run before or after
+generating a project.</p>
+</li>
+<li><p>Paths to local projects can be specified as absolute or relative.</p>
+</li>
+<li><p>Projects are always generated to your current directory.</p>
+</li>
+</ul>
+<a name="user-content-available-cookiecutters"></a>
+<h2><a id="user-content-available-cookiecutters" class="anchor" href="#available-cookiecutters" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Available Cookiecutters</h2>
+<p>Here is a list of <strong>cookiecutters</strong> (aka Cookiecutter project templates) for you to use or fork.</p>
+<p>Make your own, then submit a pull request adding yours to this list!</p>
+<a name="user-content-python"></a>
+<h3><a id="user-content-python" class="anchor" href="#python" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Python</h3>
+<ul>
+<li><a href="https://github.com/audreyr/cookiecutter-pypackage">cookiecutter-pypackage</a>: <a href="https://github.com/audreyr">@audreyr</a>'s ultimate Python package project
+template.</li>
+<li><a href="https://github.com/ionelmc/cookiecutter-pylibrary">cookiecutter-pylibrary</a>: An intricate template designed to quickly get started with good testing and packaging (working configuration for Tox, Pytest, Travis-CI, Coveralls, AppVeyor, Sphinx docs, isort, bumpversion, packaging checks etc).</li>
+<li><a href="https://bitbucket.org/tryton/cookiecutter">cookiecutter-tryton</a>: A template to create base and external Tryton modules.</li>
+<li><a href="https://github.com/pytest-dev/cookiecutter-pytest-plugin">cookiecutter-pytest-plugin</a>: Minimal Cookiecutter template for authoring <a href="http://pytest.org/latest/">pytest</a> plugins that help you to write better programs.</li>
+<li><a href="https://github.com/vintasoftware/cookiecutter-tapioca">cookiecutter-tapioca</a>: A Template for building <a href="https://github.com/vintasoftware/tapioca-wrapper">tapioca-wrapper</a> based web API wrappers (clients).</li>
+</ul>
+<a name="user-content-python-django"></a>
+<h4><a id="user-content-python-django" class="anchor" href="#python-django" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Python-Django</h4>
+<ul>
+<li><a href="https://github.com/pydanny/cookiecutter-django">cookiecutter-django</a>: A bleeding edge Django project template with Bootstrap 4, customizable users app, starter templates,  working user registration, celery setup, and much more.</li>
+</ul>
+<a name="user-content-similar-projects"></a>
+<h2><a id="user-content-similar-projects" class="anchor" href="#similar-projects" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Similar projects</h2>
+<ul>
+<li><a href="http://pythonpaste.org/script/#paster-create">Paste</a> has a create option that creates a skeleton project.</li>
+<li><a href="https://github.com/novagile/diecutter">Diecutter</a>: an API service that will give you back a configuration file from
+a template and variables.</li>
+<li><a href="https://docs.djangoproject.com/en/1.5/ref/django-admin/#django-admin-startproject">Django</a>'s startproject and startapp commands can take in a --template
+option.</li>
+<li><a href="https://github.com/fcurella/python-packager">python-packager</a>: Creates Python packages from its own template, with
+configurable options.</li>
+<li><a href="https://github.com/yeoman/generator">Yeoman</a> has a Rails-inspired generator system that provides scaffolding
+for apps.</li>
+<li><a href="http://docs.pylonsproject.org/projects/pyramid/en/latest/narr/scaffolding.html">Pyramid</a>'s pcreate command for creating Pyramid projects from scaffold templates.</li>
+<li><a href="https://github.com/iElectric/mr.bob">mr.bob</a> is a filesystem template renderer, meant to deprecate tools such as
+paster and templer.</li>
+<li><a href="https://github.com/gruntjs/grunt-init">grunt-init</a> used to be built into Grunt and is now a standalone scaffolding tool
+to automate project creation.</li>
+<li><a href="https://github.com/paulmillr/scaffolt">scaffolt</a> consumes JSON generators with Handlebars support.</li>
+<li><a href="https://github.com/paulmillr/init-skeleton">init-skeleton</a> clones or copies a repository, executes npm install and bower install and removes the .git directory.</li>
+<li><a href="https://bitbucket.org/ned/cog">Cog</a> python-based code generation toolkit developed by Ned Batchelder</li>
+<li><a href="https://github.com/christabor/Skaffold">Skaffold</a> python and json config based django/MVC generator, with some add-ons and integrations.</li>
+</ul>
+<a name="user-content-community"></a>
+<h2><a id="user-content-community" class="anchor" href="#community" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Community</h2>
+<p>The core committer team is <a href="https://github.com/audreyr">@audreyr</a>, <a href="https://github.com/pydanny">@pydanny</a>, <a href="https://github.com/michaeljoseph">@michaeljoseph</a>,
+<a href="https://github.com/pfmoore">@pfmoore</a>, and <a href="https://github.com/hackebrot">@hackebrot</a>. We
+welcome you and invite you to participate.</p>
+<p>Stuck? Try one of the following:</p>
+<ul>
+<li>See the <a href="http://cookiecutter.readthedocs.org/en/latest/troubleshooting.html">Troubleshooting</a> page.</li>
+<li>Ask for help on <a href="http://stackoverflow.com/">Stack Overflow</a>.</li>
+<li>You are strongly encouraged to <a href="https://github.com/audreyr/cookiecutter/issues?state=open">file an issue</a> about the problem, even if
+it's just "I can't get it to work on this cookiecutter" with a link to your
+cookiecutter. Don't worry about naming/pinpointing the issue properly.</li>
+<li>Ask for help on <a href="https://gitter.im/audreyr/cookiecutter">Gitter</a> if you must (but please try one of the other
+options first, so that others can benefit from the discussion)</li>
+</ul>
+<p>Development on Cookiecutter is community-driven:</p>
+<ul>
+<li>Huge thanks to all the <a href="https://github.com/audreyr/cookiecutter/blob/master/AUTHORS.rst">contributors</a> who have pitched in to help make
+Cookiecutter an even better tool.</li>
+<li>Everyone is invited to contribute. Read the <a href="https://github.com/audreyr/cookiecutter/blob/master/CONTRIBUTING.rst">contributing instructions</a>,
+then get started.</li>
+</ul>
+<p>Connect with other Cookiecutter contributors and users on <a href="https://gitter.im/audreyr/cookiecutter">Gitter</a>:</p>
+<ul>
+<li><a href="https://gitter.im/audreyr/cookiecutter">https://gitter.im/audreyr/cookiecutter</a> (note: due to work and commitments,
+a core committer might not always be available)</li>
+</ul>
+<p>Encouragement is unbelievably motivating. If you want more work done on
+Cookiecutter, show support:</p>
+<ul>
+<li>Thank a core committer for their efforts.</li>
+<li>Star <a href="https://github.com/audreyr/cookiecutter">Cookiecutter on GitHub</a>.</li>
+<li>Join the <a href="https://www.gittip.com/for/cookiecutter/">Cookiecutter Gittip community</a>.</li>
+</ul>
+<p>Got criticism or complaints?</p>
+<ul>
+<li><a href="https://github.com/audreyr/cookiecutter/issues?state=open">File an issue</a> so that Cookiecutter can be improved. Be friendly
+and constructive about what could be better. Make detailed suggestions.</li>
+<li><strong>Keep us in the loop so that we can help.</strong> For example, if you are
+discussing problems with Cookiecutter on a mailing list, <a href="https://github.com/audreyr/cookiecutter/issues?state=open">file an issue</a>
+where you link to the discussion thread and/or cc at least 1 core committer on
+the email.</li>
+<li>Be encouraging. A comment like "This function ought to be rewritten like
+this" is much more likely to result in action than a comment like "Eww, look
+how bad this function is."</li>
+</ul>
+<p>Waiting for a response to an issue/question?</p>
+<ul>
+<li>Be patient and persistent. All issues are on the core committer team's radar and
+will be considered thoughtfully, but we have a lot of issues to work through. If
+urgent, it's fine to ping a core committer in the issue with a reminder.</li>
+<li>Ask others to comment, discuss, review, etc.</li>
+<li>Search the Cookiecutter repo for issues related to yours.</li>
+<li>Need a fix/feature/release/help urgently, and can't wait? <a href="https://github.com/audreyr">@audreyr</a> is
+available for hire for consultation or custom development.</li>
+</ul>
+<a name="user-content-support-this-project"></a>
+<h2><a id="user-content-support-this-project" class="anchor" href="#support-this-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Support This Project</h2>
+<p>This project is maintained by volunteers. Support their efforts by spreading the word about:</p>
+<a href="http://www.twoscoops.academy/"><img alt="Two Scoops Academy" id="user-content-two-scoops-academy" src="https://camo.githubusercontent.com/12b455e11953a11934b49612a5e81b6c09112eec/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f747361636164656d792f696d616765732f7473612d6c6f676f2d3235307836302d7472616e73706172656e742d30312e706e67" data-canonical-src="https://s3.amazonaws.com/tsacademy/images/tsa-logo-250x60-transparent-01.png" style="max-width:100%;"></a>
+<a name="user-content-code-of-conduct"></a>
+<h2><a id="user-content-code-of-conduct" class="anchor" href="#code-of-conduct" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Code of Conduct</h2>
+<p>Everyone interacting in the Cookiecutter project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the <a href="https://www.pypa.io/en/latest/code-of-conduct/">PyPA Code of Conduct</a>.</p>
+
+</article></div>

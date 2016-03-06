@@ -1,0 +1,334 @@
+<div class="announce instapaper_body rst" data-path="README.rst" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1><a id="user-content-cookiecutter-pylibrary" class="anchor" href="#cookiecutter-pylibrary" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>cookiecutter-pylibrary</h1>
+<p><a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> template for a Python python library. <a href="https://travis-ci.org/ionelmc/cookiecutter-pylibrary"><img alt="Travis-CI Build Status" src="https://camo.githubusercontent.com/308142bdb6420cb8a1f29de18e660737097754d4/687474703a2f2f696d672e736869656c64732e696f2f7472617669732f696f6e656c6d632f636f6f6b69656375747465722d70796c6962726172792f6d61737465722e7376673f7374796c653d666c6174266c6162656c3d547261766973" data-canonical-src="http://img.shields.io/travis/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&amp;label=Travis" style="max-width:100%;"></a> <a href="https://ci.appveyor.com/project/ionelmc/cookiecutter-pylibrary"><img alt="AppVeyor Build Status" src="https://camo.githubusercontent.com/9bfb9adcfed518529e68da216dfb416bc2a9fda7/68747470733a2f2f696d672e736869656c64732e696f2f6170707665796f722f63692f696f6e656c6d632f636f6f6b69656375747465722d70796c6962726172792f6d61737465722e7376673f7374796c653d666c6174266c6162656c3d4170705665796f72" data-canonical-src="https://img.shields.io/appveyor/ci/ionelmc/cookiecutter-pylibrary/master.svg?style=flat&amp;label=AppVeyor" style="max-width:100%;"></a></p>
+<p><em>Notes</em>:</p>
+<ul>
+<li>This is largely designed to address this <a href="http://blog.ionelmc.ro/2014/05/25/python-packaging/">blog post about packaging python
+libraries</a>.<ul>
+<li>... and it will save you from <a href="http://blog.ionelmc.ro/2014/06/25/python-packaging-pitfalls/">packaging pitfalls</a>.</li>
+</ul>
+</li>
+<li>There's a bare library using this template (if you're curious about the final
+result): <a href="https://github.com/ionelmc/python-nameless">https://github.com/ionelmc/python-nameless</a>.</li>
+</ul>
+<div id="user-content-table-of-contents">
+<p>Table of Contents</p>
+<ul>
+<li><a href="#features" id="user-content-id4">Features</a></li>
+<li><a href="#requirements" id="user-content-id5">Requirements</a></li>
+<li><a href="#usage-and-options" id="user-content-id6">Usage and options</a><ul>
+<li><a href="#developing-the-project" id="user-content-id7">Developing the project</a></li>
+<li><a href="#releasing-the-project" id="user-content-id8">Releasing the project</a><ul>
+<li><a href="#version-management" id="user-content-id9">Version management</a></li>
+<li><a href="#building-and-uploading" id="user-content-id10">Building and uploading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#changelog" id="user-content-id11">Changelog</a></li>
+<li><a href="#questions-answers" id="user-content-id12">Questions &amp; answers</a></li>
+<li><a href="#not-exactly-what-you-want" id="user-content-id13">Not Exactly What You Want?</a></li>
+</ul>
+</div>
+<a name="user-content-features"></a>
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id4">Features</a></h2>
+<p>This is an "all inclusive" sort of template.</p>
+<ul>
+<li>BSD 2-clause license.</li>
+<li><a href="http://testrun.org/tox/">Tox</a> for managing test environments for Python 2.7, 3.3, PyPy etc.</li>
+<li><a href="http://pytest.org/">Pytest</a> or <a href="http://nose.readthedocs.org/">Nose</a> for testing Python 2.7, 3.3, PyPy etc.</li>
+<li><em>Optional</em> support for creating a tests matrix out of dependencies and python versions.</li>
+<li><a href="http://travis-ci.org/">Travis-CI</a> and <a href="http://www.appveyor.com/">AppVeyor</a> for continuous testing.</li>
+<li><a href="https://coveralls.io/">Coveralls</a> or <a href="http://codecov.io/">Codecov</a> for coverage tracking (using <a href="http://testrun.org/tox/">Tox</a>).</li>
+<li>Documentation with <a href="http://sphinx-doc.org/">Sphinx</a>, ready for <a href="https://readthedocs.org/">ReadTheDocs</a>.</li>
+<li>Configurations for:<ul>
+<li><a href="https://pypi.python.org/pypi/isort">isort</a></li>
+<li><a href="https://pypi.python.org/pypi/bumpversion">bumpversion</a></li>
+</ul>
+</li>
+<li>Support for C extensions (including coverage measurement for the C code).</li>
+<li>Packaging and code quality checks. This template comes with a tox environment (<code>check</code>) that will:<ul>
+<li>Check if your <code>README.rst</code> is valid.</li>
+<li>Check if the <code>MANIFEST.in</code> has any issues.</li>
+<li>Run <code>flake8</code> (a combo of PEP8, pyflakes and McCabe checks)</li>
+</ul>
+</li>
+</ul>
+<a name="user-content-requirements"></a>
+<h2><a id="user-content-requirements" class="anchor" href="#requirements" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id5">Requirements</a></h2>
+<p>Projects using this template have these minimal dependencies:</p>
+<ul>
+<li><a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> - just for creating the project</li>
+<li><a href="http://testrun.org/tox/">Tox</a> - for running the tests</li>
+<li><a href="https://pypi.python.org/pypi/setuptools">Setuptools</a> - for building the package, wheels etc. Now-days Setuptools is widely available, it shouldn't pose a
+problem :)</li>
+</ul>
+<p>To get quickly started on a new system, just <a href="https://pypi.python.org/pypi/setuptools#installation-instructions">install setuptools</a> and then <a href="https://pip.pypa.io/en/latest/installing.html">install pip</a>. That's the bare minimum to required install <a href="http://testrun.org/tox/">Tox</a> and <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a>. To install
+them, just run this in your shell or command prompt:</p>
+<pre>pip install tox cookiecutter
+</pre>
+<a name="user-content-usage-and-options"></a>
+<h2><a id="user-content-usage-and-options" class="anchor" href="#usage-and-options" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id6">Usage and options</a></h2>
+<p>This template is more involved than the regular <a href="https://github.com/audreyr/cookiecutter-pypackage">cookiecutter-pypackage</a>.</p>
+<p>First generate your project:</p>
+<pre>cookiecutter gh:ionelmc/cookiecutter-pylibrary
+</pre>
+<p>You will be asked for these fields:</p>
+<table>
+
+
+
+
+
+<thead valign="bottom">
+<tr><th>Template variable</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr><td><code>project_name</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>Nameless<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Verbose project name, used in headings (docs, readme, etc).</td>
+</tr>
+<tr><td><code>repo_name</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>python-nameless<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Repository name on github.</td>
+</tr>
+<tr><td><code>package_name</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>nameless<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Python package name (whatever you would import).</td>
+</tr>
+<tr><td><code>distribution_name</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>nameless<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>PyPI distribution name (what you would <code>pip install</code>).</td>
+</tr>
+<tr><td><code>c_extension_support</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Support C extensions (will slighly change the outputted <code>setup.py</code>)</td>
+</tr>
+<tr><td><code>c_extension_optional</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Make C extensions optional (will allow your package to install even if extensions can't be compiled)</td>
+</tr>
+<tr><td><code>test_matrix_configurator</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Enable the test matrix generator script. If you don't have a huge number of test environments then probably you
+don't need this.</td>
+</tr>
+<tr><td><code>test_matrix_separate_coverage</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>Enable this to have a separate env for measuring coverage. Indicated if you want to run doctests or collect tests
+from <code>src</code> with pytest.</p>
+<p>Note that <code>test_matrix_separate_coverage == 'no'</code> only works if you also have <code>test_matrix_configurator == 'no'</code>.</p>
+</td>
+</tr>
+<tr><td><code>test_runner</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>pytest<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Test runner to use. Available options: <code>pytest</code> or <code>nose</code>.</td>
+</tr>
+<tr><td><code>command_line_interface</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>plain<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>Option to enable a CLI (a bin/executable file). Available options:</p>
+<ul>
+<li><code>plain</code> - a very simple command.</li>
+<li><code>click</code> - a command implemented with <a href="http://click.pocoo.org/">click</a> - which you can use to build more complex commands.</li>
+<li><code>no</code> - no CLI at all.</li>
+</ul>
+</td>
+</tr>
+<tr><td><code>command_line_interface_bin_name</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>nameless<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Name of the CLI bin/executable file.</td>
+</tr>
+<tr><td><code>cookiecutter.coveralls</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Enable pushing coverage data to <a href="https://coveralls.io/">Coveralls</a> and add badge in <code>README.rst</code>.</td>
+</tr>
+<tr><td><code>cookiecutter.codecov</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>Enable pushing coverage data to <a href="http://codecov.io/">Codecov</a> and add badge in <code>README.rst</code>.</p>
+<p><strong>Note:</strong> Doesn't support pushing C extension coverage yet.</p>
+</td>
+</tr>
+<tr><td><code>cookiecutter.landscape</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Add a <a href="https://landscape.io/">Landscape</a> badge in <code>README.rst</code>.</td>
+</tr>
+<tr><td><code>cookiecutter.scrutinizer</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Add a <a href="https://scrutinizer-ci.com/">Scrutinizer</a> badge in <code>README.rst</code>.</td>
+</tr>
+<tr><td><code>cookiecutter.codacy</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>Add a <a href="https://codacy.com/">Codacy</a> badge in <code>README.rst</code>.</p>
+<blockquote>
+<strong>Note:</strong> After importing the project in Codacy, find the hexadecimal project ID from settings and replace it in badge URL</blockquote>
+</td>
+</tr>
+<tr><td><code>cookiecutter.codeclimate</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>Add a <a href="https://codeclimate.com/">CodeClimate</a> badge in <code>README.rst</code>.</td>
+</tr>
+<tr><td><code>sphinx_theme</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>readthedocs<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>What <a href="http://sphinx-doc.org/">Sphinx</a> theme to use.</p>
+<p>If theme is different than <code>"readthedocs"</code> then it's also going to be added in <code>docs/requirements.txt</code>.</p>
+<p>Suggested alternative: sphinx-py3doc-enhanced-theme
+&lt;<a href="https://pypi.python.org/pypi/sphinx_py3doc_enhanced_theme">https://pypi.python.org/pypi/sphinx_py3doc_enhanced_theme</a>&gt; for a responsive theme based on
+the Python 3 documentation.</p>
+</td>
+</tr>
+<tr><td><code>sphinx_doctest</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>no<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td><p>Set to <code>"yes"</code> if you want to enable doctesting in the docs environment. Works best with
+<code>test_matrix_separate_coverage == 'no'</code>.</p>
+<p>Read more about <a href="http://www.sphinx-doc.org/en/stable/ext/doctest.html">doctest support in Sphinx</a>.</p>
+</td>
+</tr>
+<tr><td><code>travis</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>If you want the <a href="#id14">Travis_</a> badge and configuration.</td>
+</tr>
+<tr><td><code>appveyor</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>If you want the <a href="http://www.appveyor.com/">AppVeyor</a> badge and configuration.</td>
+</tr>
+<tr><td><code>requiresio</code></td>
+<td><div class="highlight highlight-source-python"><pre><span class="pl-s"><span class="pl-pds">"</span>yes<span class="pl-pds">"</span></span></pre></div>
+</td>
+<td>If you want the <a href="https://requires.io/">requires.io</a> badge and configuration.</td>
+</tr>
+</tbody>
+</table>
+<p>The testing (<code>tox.ini</code> and <code>.travis.yml</code>) configuration is generated from templates. For your convenience there's an
+initial bootstrap <code>tox.ini</code>, to get the initial generation going just run:</p>
+<pre>tox
+</pre>
+<p>You can later regenerate <code>tox.ini</code> and <code>.travis.yml</code> by running (if you enabled the <code>test_matrix_configurator</code>
+option):</p>
+<pre>tox -e bootstrap
+</pre>
+<p>After this you can create the initial repository (make sure you <a href="https://github.com/new">create</a> an <em>empty</em> Github
+project):</p>
+<pre>git init .
+git add .
+git commit -m "Initial skel."
+git remote add origin git@github.com:ionelmc/python-nameless.git
+git push -u origin master
+</pre>
+<p>Then:</p>
+<ul>
+<li><a href="https://travis-ci.org/profile">Enable the repository in your Travis CI account</a>.</li>
+<li><a href="https://coveralls.io/repos/new">Enable the repository in your Coveralls account</a>.</li>
+<li><a href="https://readthedocs.org/dashboard/import/">Add the repo to your ReadTheDocs account</a> + turn on the ReadTheDocs
+service hook. Don't forget to enable virtualenv and specify <code>docs/requirements.txt</code> as the requirements file in
+Advanced Settings.</li>
+</ul>
+<a name="user-content-developing-the-project"></a>
+<h3><a id="user-content-developing-the-project" class="anchor" href="#developing-the-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id7">Developing the project</a></h3>
+<p>To run all the tests, just run:</p>
+<pre>tox
+</pre>
+<p>To see all the tox environments:</p>
+<pre>tox -l
+</pre>
+<p>To only build the docs:</p>
+<pre>tox -e docs
+</pre>
+<p>To build and verify that the built package is proper and other code QA checks:</p>
+<pre>tox -e check
+</pre>
+<a name="user-content-releasing-the-project"></a>
+<h3><a id="user-content-releasing-the-project" class="anchor" href="#releasing-the-project" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id8">Releasing the project</a></h3>
+<p>Before releasing your package on PyPI you should have all the tox environments passing.</p>
+<a name="user-content-version-management"></a>
+<h4><a id="user-content-version-management" class="anchor" href="#version-management" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id9">Version management</a></h4>
+<p>This template provides a basic <a href="https://pypi.python.org/pypi/bumpversion">bumpversion</a> configuration. It's as simple as running:</p>
+<ul>
+<li><code>bumpversion patch</code> to increase version from 1.0.0 to 1.0.1.</li>
+<li><code>bumpversion minor</code> to increase version from 1.0.0 to 1.1.0.</li>
+<li><code>bumpversion major</code> to increase version from 1.0.0 to 2.0.0.</li>
+</ul>
+<p>You should read <a href="http://semver.org/">Semantic Versioning 2.0.0</a> before bumping versions.</p>
+<a name="user-content-building-and-uploading"></a>
+<h4><a id="user-content-building-and-uploading" class="anchor" href="#building-and-uploading" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id10">Building and uploading</a></h4>
+<p>Before building dists make sure you got a clean build area:</p>
+<pre>rm -rf build
+rm -rf src/*.egg-info
+</pre>
+<p>Note:</p>
+<blockquote>
+Dirty <code>build</code> or <code>egg-info</code> dirs can cause problems: missing or stale files in the resulting dist or
+strange and confusing errors. Avoid having them around.</blockquote>
+<p>Then you should check that you got no packaging issues:</p>
+<pre>tox -e check
+</pre>
+<p>And then you can build the <code>sdist</code>, and if possible, the <code>bdist_wheel</code> too:</p>
+<pre>python setup.py clean --all sdist bdist_wheel
+</pre>
+<p>To make a release of the project on PyPI, assuming you got some distributions in <code>dist/</code>, the most simple usage is:</p>
+<pre>twine register dist/*
+twine upload --skip-existing dist/*
+</pre>
+<p>Note:</p>
+<blockquote>
+<a href="https://pypi.python.org/pypi/twine">twine</a> is a tool that you can use to securely upload your releases to PyPI.
+You can still use the old <code>python setup.py register sdist bdist_wheel upload</code> but it's not very secure - your PyPI
+password will be sent over plaintext.</blockquote>
+<a name="user-content-changelog"></a>
+<h2><a id="user-content-changelog" class="anchor" href="#changelog" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id11">Changelog</a></h2>
+<p>See <a href="https://github.com/ionelmc/cookiecutter-pylibrary/blob/master/CHANGELOG.rst">CHANGELOG.rst</a>.</p>
+<a name="user-content-questions-answers"></a>
+<h2><a id="user-content-questions--answers" class="anchor" href="#questions--answers" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id12">Questions &amp; answers</a></h2>
+<p>There's no Makefile?</p>
+<blockquote>
+Sorry, no <code>Makefile</code> yet. The <a href="http://testrun.org/tox/">Tox</a> environments stand for whatever you'd have in a <code>Makefile</code>.</blockquote>
+<p>Why does <code>tox.ini</code> have a <code>passenv = *</code>?</p>
+<blockquote>
+<p>Tox 2.0 changes the way it runs subprocesses - it no longer passes all the environment variables by default. This causes
+all sorts of problems if you want to run/use any of these with Tox: SSH Agents, Browsers (for Selenium), Appengine SDK,
+VC Compiler and so on.</p>
+<p>cookiecutter-pylibrary errs on the side of convenience here. You can always remove <code>passenv = *</code> if you like
+the strictness.</p>
+</blockquote>
+<p>Why is the version stored in several files (<code>pkg/__init__.py</code>, <code>setup.py</code>, <code>docs/conf.py</code>)?</p>
+<blockquote>
+<p>We cannot use a metadata/version file <a href="#id2" id="user-content-id1">[1]</a> because this template is to be used with both distributions of packages (dirs
+with <code>__init__.py</code>) and modules (simple <code>.py</code> files that go straigh in <code>site-packages</code>). There's no good place
+for that extra file if you're distributing modules.</p>
+<p>But this isn't so bad - <a href="https://pypi.python.org/pypi/bumpversion">bumpversion</a> manages the version string quite
+neatly.</p>
+</blockquote>
+<table frame="void" id="user-content-id2" rules="none">
+
+<tbody valign="top">
+<tr><td><a href="#id1">[1]</a></td><td>Example, an <code>__about__.py</code> file.</td></tr>
+</tbody>
+</table>
+<a name="user-content-not-exactly-what-you-want"></a>
+<h2><a id="user-content-not-exactly-what-you-want" class="anchor" href="#not-exactly-what-you-want" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a><a href="#id13">Not Exactly What You Want?</a></h2>
+<p>No way, this is the best. <img class="emoji" title=":stuck_out_tongue_winking_eye:" alt=":stuck_out_tongue_winking_eye:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f61c.png" height="20" width="20" align="absmiddle"></p>
+<p>If you have criticism or suggestions please open up an Issue or Pull Request.</p>
+
+</article></div>

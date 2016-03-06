@@ -1,0 +1,121 @@
+<div class="announce instapaper_body md" data-path="README.md" id="readme"><article class="markdown-body entry-content" itemprop="text"><h1></h1>
+
+<h1><a id="user-content-cookiecutter-pytest-plugin" class="anchor" href="#cookiecutter-pytest-plugin" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Cookiecutter Pytest Plugin</h1>
+
+<p><a href="https://gitter.im/pytest-dev/cookiecutter-pytest-plugin?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge" title="Join Chat on Gitter.im"><img src="https://camo.githubusercontent.com/da2edb525cde1455a622c58c0effc3a90b9a181c/68747470733a2f2f6261646765732e6769747465722e696d2f4a6f696e253230436861742e737667" alt="Join Chat on Gitter.im" data-canonical-src="https://badges.gitter.im/Join%20Chat.svg" style="max-width:100%;"></a>
+<a href="https://travis-ci.org/pytest-dev/cookiecutter-pytest-plugin" title="See Build Status on Travis CI"><img src="https://camo.githubusercontent.com/1e54b3a574fa034757b1aa8df34685f71d449208/68747470733a2f2f7472617669732d63692e6f72672f7079746573742d6465762f636f6f6b69656375747465722d7079746573742d706c7567696e2e7376673f6272616e63683d6d6173746572" alt="See Build Status on Travis CI" data-canonical-src="https://travis-ci.org/pytest-dev/cookiecutter-pytest-plugin.svg?branch=master" style="max-width:100%;"></a>
+<a href="http://cookiecutter-pytest-plugin.readthedocs.org/en/latest/" title="Documentation"><img src="https://camo.githubusercontent.com/e023a16979835bf598f706dd67fcb4ad2d1af0ca/68747470733a2f2f72656164746865646f63732e6f72672f70726f6a656374732f636f6f6b69656375747465722d7079746573742d706c7567696e2f62616467652f3f76657273696f6e3d6c6174657374" alt="Documentation Status" data-canonical-src="https://readthedocs.org/projects/cookiecutter-pytest-plugin/badge/?version=latest" style="max-width:100%;"></a></p>
+
+<p>Minimal <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> template for authoring <a href="https://github.com/pytest-dev/pytest">Pytest</a> plugins that help
+you to write better programs.</p>
+
+<blockquote>
+<p>This template uses choice variables and hence requires Cookiecutter v 1.1.0 or higher</p>
+</blockquote>
+
+<h2><a id="user-content-getting-started" class="anchor" href="#getting-started" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Getting Started</h2>
+
+<p>Simply install <a href="https://github.com/audreyr/cookiecutter">Cookiecutter</a> and generate a new Pytest plugin project:</p>
+
+<pre lang="no-highlight"><code>$ pip install cookiecutter
+$ cookiecutter https://github.com/pytest-dev/cookiecutter-pytest-plugin
+</code></pre>
+
+<p>Cookiecutter prompts you for information regarding your plugin:</p>
+
+<pre lang="no-highlight"><code>full_name [Raphael Pierzina]: Andreas Pelme
+email [raphael@hackebrot.de]: andreas@pelme.se
+github_username [hackebrot]: pelme
+plugin_name [foobar]: awesome
+short_description [A simple plugin to use with Pytest]:
+version [0.1.0]:
+pytest_version [2.8.1]:
+year [2015]:
+Select docs_tool:
+1 - mkdocs
+2 - sphinx
+3 - none
+Choose from 1, 2, 3 [1]: 1
+Select license:
+1 - MIT
+2 - BSD-3
+3 - GNU GPL v3.0
+Choose from 1, 2, 3 [1]: 2
+INFO:post_gen_project:Moving files for mkdocs.
+</code></pre>
+
+<p>There you go - you just created a minimal Pytest plugin:</p>
+
+<pre lang="no-highlight"><code>pytest-awesome/
+├── LICENSE
+├── README.rst
+├── docs
+│   └── index.md
+├── mkdocs.yml
+├── pytest_awesome.py
+├── setup.py
+├── tests
+│   ├── conftest.py
+│   └── test_awesome.py
+└── tox.ini
+</code></pre>
+
+<h2><a id="user-content-features" class="anchor" href="#features" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Features</h2>
+
+<ul>
+<li>Installable <a href="https://pypi.python.org/pypi">PyPI</a> package featuring a <code>setup.py</code>.</li>
+<li>Test suite running <a href="https://tox.readthedocs.org/en/latest/">Tox</a> and <a href="https://github.com/pytest-dev/pytest">Pytest</a> that makes sure your plugin is
+working as expected</li>
+<li>Working example code for a fixture, a cli option, as well as a pytest.ini option</li>
+<li>Comprehensive <code>README.rst</code> file that contains useful information
+about your plugin</li>
+<li>Continuous integration configuration for <a href="https://travis-ci.com/">Travis CI</a> and <a href="http://www.appveyor.com/">AppVeyor</a></li>
+<li>Optional documentation with either <a href="http://sphinx-doc.org/">Sphinx</a> or <a href="http://www.mkdocs.org/">MkDocs</a></li>
+<li>Choose from several licenses, such as <a href="http://opensource.org/licenses/MIT">MIT</a>, <a href="http://opensource.org/licenses/BSD-3-Clause">BSD-3</a>, <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache v2.0</a> or <a href="http://www.gnu.org/licenses/gpl-3.0.txt">GNU GPL v3.0</a></li>
+</ul>
+
+<h2><a id="user-content-requirements-to-submit-a-plugin" class="anchor" href="#requirements-to-submit-a-plugin" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Requirements to Submit a Plugin</h2>
+
+<p>If you plan on submitting your plugin to the <a href="https://github.com/pytest-dev/">pytest-dev organization</a> you need
+to meet the following requirements:</p>
+
+<ul>
+<li>  PyPI presence with a setup.py that contains a license, pytest-
+prefixed, version number, authors, short and long description.</li>
+<li>  a tox.ini for running tests using Tox.</li>
+<li>  a README describing how to use the plugin and on which platforms
+it runs.</li>
+<li>  a LICENSE file or equivalent containing the licensing information,
+with matching info in setup.py.</li>
+<li>  an issue tracker unless you rather want to use the core Pytest
+issue tracker.</li>
+</ul>
+
+<p>Please see the official guidelines at <a href="https://pytest.org/latest/contributing.html#submit-a-plugin-co-develop-pytest">Submit a Plugin</a>.</p>
+
+<h2><a id="user-content-resources" class="anchor" href="#resources" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Resources</h2>
+
+<p>Please consult the <a href="https://github.com/pytest-dev/pytest">Pytest</a> docs for more information on hooks at
+<a href="https://pytest.org/latest/plugins.html#well-specified-hooks">Pytest Hook Reference</a>.</p>
+
+<h2><a id="user-content-contribute" class="anchor" href="#contribute" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Contribute</h2>
+
+<p>We welcome you to contribute to this project. Please visit the <a href="http://cookiecutter-pytest-plugin.readthedocs.org/en/latest/" title="Documentation">documentation</a> to get started!</p>
+
+<h2><a id="user-content-issues" class="anchor" href="#issues" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Issues</h2>
+
+<p>This template has been tested on Mac OS X Yosemite.</p>
+
+<p>If you encounter any problems, please <a href="https://github.com/pytest-dev/cookiecutter-pytest-plugin/issues">file an issue</a> along with a
+detailed description.</p>
+
+<h2><a id="user-content-code-of-conduct" class="anchor" href="#code-of-conduct" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>Code of Conduct</h2>
+
+<p>Everyone interacting in the Cookiecutter Pytest Plugin project's codebases, issue trackers, chat
+rooms, and mailing lists is expected to follow the <a href="https://www.pypa.io/en/latest/code-of-conduct/">PyPA Code of Conduct</a>.</p>
+
+<h2><a id="user-content-license" class="anchor" href="#license" aria-hidden="true"><svg aria-hidden="true" class="octicon octicon-link" height="16" role="img" version="1.1" viewBox="0 0 16 16" width="16"><path d="M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z"></path></svg></a>License</h2>
+
+<p>Distributed under the terms of the <a href="http://opensource.org/licenses/MIT">MIT license</a>, Cookiecutter Pytest
+Plugin is free and open source software</p>
+</article></div>
