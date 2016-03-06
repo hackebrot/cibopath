@@ -2,6 +2,8 @@
 Cibopath
 ========
 
+|travis-ci|
+
 Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
     A Cibopath can take a bite from anything and get a psychic sensation of
@@ -9,6 +11,10 @@ Search `Cookiecutter`_ templates on GitHub with Python 3.5.
     beets.
 
     Source: `Wikipedia: Chew Comics`_
+
+.. |travis-ci| image:: https://travis-ci.org/hackebrot/cibopath.svg?branch=master
+    :target: https://travis-ci.org/hackebrot/cibopath
+    :alt: See Build Status on Travis CI
 
 
 Usage
