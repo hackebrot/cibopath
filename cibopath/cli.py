@@ -155,7 +155,7 @@ def search_cmd(load_file, tags):
     type=click.Path(), callback=_validate_load_file
 )
 @click.argument('name', type=click.STRING)
-def search_cmd(load_file, name):
+def info_cmd(load_file, name):
     logger = logging.getLogger('cibopath')
 
     templates = [t for t in load(load_file) if t.name == name]
