@@ -21,6 +21,7 @@ Usage
 
 	Commands:
 	  config
+	  info
 	  search
 	  update
 
