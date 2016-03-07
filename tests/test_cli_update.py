@@ -2,6 +2,9 @@
 
 import pathlib
 import json
+from configparser import RawConfigParser
+
+import pytest
 
 
 def test_store_template_data_to_json(cli_runner, tmp_rc, tmp_templates_file):
@@ -26,3 +29,26 @@ def test_store_template_data_to_json(cli_runner, tmp_rc, tmp_templates_file):
         'cookiecutter-django',
     ]
     assert fetched_templates == expected_templates
+
+
+@pytest.fixture
+def incomplete_rc(tmpdir):
+    rc_file = str(tmpdir / 'noperc')
+
+    config = RawConfigParser()
+    config['nope'] = {'foo': 'bar'}
+
+    with open(rc_file, 'w', encoding='utf-8') as fh:
+        config.write(fh)
+    return rc_file
+
+
+def test_fail_missing_username(cli_runner, incomplete_rc, tmp_templates_file):
+    result = cli_runner([
+        '-c', incomplete_rc, 'update',
+        '-t', '1234',
+        '-d', tmp_templates_file
+    ])
+
+    assert result.exit_code == 2
+    assert 'Error: Missing option "-u" / "--username".' in result.output
