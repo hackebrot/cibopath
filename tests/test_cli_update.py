@@ -63,3 +63,14 @@ def test_fail_missing_token(cli_runner, incomplete_rc, tmp_templates_file):
 
     assert result.exit_code == 2
     assert 'Error: Missing option "-t" / "--token".' in result.output
+
+
+def test_fail_missing_dump_file(cli_runner, incomplete_rc):
+    result = cli_runner([
+        '-c', incomplete_rc, 'update',
+        '-u', 'chew',
+        '-t', '1234'
+    ])
+
+    assert result.exit_code == 2
+    assert 'Error: Missing option "-d" / "--dump-file".' in result.output
