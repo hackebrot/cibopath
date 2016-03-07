@@ -123,7 +123,7 @@ to `Cookiecutter`_ to get started.
 Info
 ----
 
-Cibopath also provides more additional information about a given template:
+Cibopath also provides you with additional information about a given template:
 
 .. code-block:: bash
 
