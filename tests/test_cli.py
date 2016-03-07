@@ -18,8 +18,3 @@ def test_cli_group_version_option(version_cli_flag):
     result = runner.invoke(main, [version_cli_flag])
     assert result.exit_code == 0
     assert result.output == 'cibopath, version {}\n'.format(__version__)
-
-
-@pytest.fixture(params=['-v', '--verbose'])
-def verbose_cli_flag(request):
-    return request.param

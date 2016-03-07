@@ -111,3 +111,8 @@ def tmp_rc(tmpdir, tmp_templates_file):
     with open(rc_file, 'w', encoding='utf-8') as fh:
         config.write(fh)
     return rc_file
+
+
+@pytest.fixture(params=['-v', '--verbose'])
+def verbose_cli_flag(request):
+    return request.param
