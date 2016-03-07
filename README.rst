@@ -2,7 +2,7 @@
 Cibopath
 ========
 
-|travis-ci|
+|pypi| |pyversions| |license| |travis-ci|
 
 Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
@@ -11,6 +11,18 @@ Search `Cookiecutter`_ templates on GitHub with Python 3.5.
     beets.
 
     -- `Wikipedia: Chew Comic Book Series`_
+
+.. |pypi| image:: https://img.shields.io/pypi/v/cibopath.svg
+   :target: https://pypi.python.org/pypi/cibopath
+   :alt: PyPI Package
+
+.. |pyversions| image:: https://img.shields.io/pypi/pyversions/cibopath.svg
+   :target: https://pypi.python.org/pypi/cibopath/
+   :alt: PyPI Python Versions
+
+.. |license| image:: https://img.shields.io/pypi/l/cibopath.svg
+   :target: https://pypi.python.org/pypi/cibopath
+   :alt: PyPI Package License
 
 .. |travis-ci| image:: https://travis-ci.org/hackebrot/cibopath.svg?branch=master
     :target: https://travis-ci.org/hackebrot/cibopath
