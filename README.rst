@@ -34,21 +34,21 @@ Usage
 
 .. code-block:: text
 
-	Usage: cibopath [OPTIONS] COMMAND [ARGS]...
+    Usage: cibopath [OPTIONS] COMMAND [ARGS]...
 
-	  Cibopath - Search Cookiecutters on GitHub.
+      Cibopath - Search Cookiecutters on GitHub.
 
-	Options:
-	  -v, --verbose           Print debug information
-	  -c, --config-file PATH  Config file to hold settings
-	  -V, --version           Show the version and exit.
-	  --help                  Show this message and exit.
+    Options:
+      -v, --verbose           Print debug information
+      -c, --config-file PATH  Config file to hold settings
+      -V, --version           Show the version and exit.
+      --help                  Show this message and exit.
 
-	Commands:
-	  config
-	  info
-	  search
-	  update
+    Commands:
+      config
+      info
+      search
+      update
 
 Config
 ------
@@ -68,8 +68,8 @@ Now use the CLI to store your credentials in your home directory (default
 
 .. code-block:: bash
 
-	$ cibopath config github.username <your-username>
-	$ cibopath config github.token <your-access-token>
+    $ cibopath config github.username <your-username>
+    $ cibopath config github.token <your-access-token>
 
 Feel free to view the contents of the config file via:
 
@@ -89,14 +89,14 @@ Save the dump-file location to settings:
 
 .. code-block:: bash
 
-	$ cibopath config templates.file ~/.cibopath/templates.json
-	$ cibopath -v update
+    $ cibopath config templates.file ~/.cibopath/templates.json
+    $ cibopath -v update
 
 Or specify it on the CLI:
 
 .. code-block:: bash
 
-	$ cibopath -v update --dump-file ~/.cibopath/templates.json
+    $ cibopath -v update --dump-file ~/.cibopath/templates.json
 
 Please note that, albeit not required, the ``-v`` or ``--verbose`` flags are
 very useful if you want to see what Cibopath is doing under the hood.
@@ -111,14 +111,14 @@ Let's say you would like to know which ones support *django* and *docker*.
 
 .. code-block:: bash
 
-	$ cibopath search django docker
+    $ cibopath search django docker
 
 If you didn't save the ``templates.file`` earlier, you need to explicitly pass
 it to the CLI:
 
 .. code-block:: bash
 
-	$ cibopath search django docker --load-file ~/.cibopath/templates.json
+    $ cibopath search django docker --load-file ~/.cibopath/templates.json
 
 Cibopath will show you a list of matching templates in alphabetical order along
 with their corresponding GitHub repository URL. If you feel like one of these
@@ -127,8 +127,9 @@ to `Cookiecutter`_ to get started.
 
 .. code-block:: bash
 
-	cookiecutter-django................. https://github.com/pydanny/cookiecutter-django
-	django-docker-bootstrap............. https://github.com/legios89/django-docker-bootstrap
+    cookiecutter-django................. https://github.com/pydanny/cookiecutter-django
+    django-docker-bootstrap............. https://github.com/legios89/django-docker-bootstrap
+
 
 Info
 ----
@@ -137,7 +138,7 @@ Cibopath also provides you with additional information about a given template:
 
 .. code-block:: bash
 
-	$ cibopath info cookiecutter-pytest-plugin
+    $ cibopath info cookiecutter-pytest-plugin
 
 Info includes **Name**, **Author**, **Repository** as well as the **Context**,
 which will be used by `Cookiecutter`_ to generate the project.
