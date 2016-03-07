@@ -113,7 +113,7 @@ Let's say you would like to know which ones support *django* and *docker*.
 
 	$ cibopath search django docker
 
-If you didn't save the ``templates.file`` earlier, you need to explictly pass
+If you didn't save the ``templates.file`` earlier, you need to explicitly pass
 it to the CLI:
 
 .. code-block:: bash
