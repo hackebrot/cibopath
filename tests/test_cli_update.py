@@ -52,3 +52,14 @@ def test_fail_missing_username(cli_runner, incomplete_rc, tmp_templates_file):
 
     assert result.exit_code == 2
     assert 'Error: Missing option "-u" / "--username".' in result.output
+
+
+def test_fail_missing_token(cli_runner, incomplete_rc, tmp_templates_file):
+    result = cli_runner([
+        '-c', incomplete_rc, 'update',
+        '-u', 'chew',
+        '-d', tmp_templates_file
+    ])
+
+    assert result.exit_code == 2
+    assert 'Error: Missing option "-t" / "--token".' in result.output
