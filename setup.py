@@ -46,5 +46,5 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: Implementation :: CPython',
     ],
-    keywords=['Cookiecutter', 'Web Scraping', 'Asyncio'],
+    keywords=['cookiecutter', 'web scraping', 'asyncio', 'command-line'],
 )
