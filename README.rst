@@ -12,8 +12,6 @@ Search `Cookiecutter`_ templates on GitHub with Python 3.5.
 
     -- `Wikipedia: Chew Comic Book Series`_
 
-.. image:: https://raw.github.com/audreyr/cookiecutter/aa309b73bdc974788ba265d843a65bb94c2e608e/cookiecutter_medium.png
-
 .. |travis-ci| image:: https://travis-ci.org/hackebrot/cibopath.svg?branch=master
     :target: https://travis-ci.org/hackebrot/cibopath
     :alt: See Build Status on Travis CI
