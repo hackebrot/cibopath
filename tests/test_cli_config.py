@@ -17,12 +17,15 @@ def config_file(tmpdir):
     return config_path
 
 
-def test_config_command_list_option(cli_runner, config_file):
+def test_config_command_list_option(cli_runner, config_file, verbose_cli_flag):
     result = cli_runner([
-        '-c', str(config_file), 'config', '--list'
+        verbose_cli_flag, '-c', str(config_file), 'config', '--list'
     ])
     assert result.exit_code == 0
-    assert result.output == '[foobar]\nhello = world\n\n\n'
+
+    assert 'DEBUG cibopath cli: Logger initialized' in result.output
+    assert 'DEBUG cibopath config: Reading config file' in result.output
+    assert '[foobar]\nhello = world\n\n\n' in result.output
 
 
 def test_config_command_variable_value_args(cli_runner, config_file):
