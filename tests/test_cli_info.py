@@ -38,7 +38,7 @@ def templates_file():
     return 'tests/templates.json'
 
 
-def test_template_info(cli_runner, tmp_rc, templates_file, ):
+def test_template_info(cli_runner, tmp_rc, templates_file):
     result = cli_runner([
         '-c', tmp_rc, 'info',
         '--load-file', templates_file,
@@ -46,3 +46,13 @@ def test_template_info(cli_runner, tmp_rc, templates_file, ):
         ])
     assert result.exit_code == 0
     assert result.output == COOKIECUTTER_DJANGO_INFO
+
+
+def test_validate_load_file(cli_runner, tmp_rc):
+    result = cli_runner([
+        '-c', tmp_rc, 'info',
+        '--load-file', 'nope_not_a_file',
+        'cookiecutter-django'
+        ])
+    assert result.exit_code == 1
+    assert 'Please run "cibopath update" first.' in result.output

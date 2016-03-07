@@ -116,7 +116,7 @@ def _validate_load_file(ctx, param, value):
     if not load_file.is_file():
         raise click.FileError(
             str(load_file),
-            'Please run "cibopath update first.'
+            'Please run "cibopath update" first.'
         )
     return load_file
 
