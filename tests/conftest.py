@@ -47,7 +47,7 @@ class _Response(aiohttp.ClientResponse):
             )
             self._load_file(readme_file)
         else:
-            self._handle_error()
+            self._error()
 
     def _error(self):
         self._return_value = None
