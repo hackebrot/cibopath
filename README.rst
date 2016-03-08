@@ -50,8 +50,8 @@ Usage
       search
       update
 
-Config
-------
+User Config
+-----------
 
 First you need to `create a GitHub access token`_ for Cibopath, so it can
 authenticate with the `GitHub API v3`_. `GitHub's rate limiting`_ won't allow
@@ -78,8 +78,8 @@ Feel free to view the contents of the config file via:
     $ cibopath -v config --list
 
 
-Update
-------
+Fetch Template Information
+--------------------------
 
 With GitHub authentication in place, you now want to fetch information about
 available Cookiecutter templates. Cibopath dumps the data as a JSON file to
@@ -101,8 +101,8 @@ Or specify it on the CLI:
 Please note that, albeit not required, the ``-v`` or ``--verbose`` flags are
 very useful if you want to see what Cibopath is doing under the hood.
 
-Search
-------
+Search Keywords in Templates
+----------------------------
 
 Once you've gathered information about Cookiecutter templates, you can use
 Cibopath to search for keywords in the templates' **README** files.
@@ -131,8 +131,8 @@ to `Cookiecutter`_ to get started.
     django-docker-bootstrap............. https://github.com/legios89/django-docker-bootstrap
 
 
-Info
-----
+Display Template Information
+----------------------------
 
 Cibopath also provides you with additional information about a given template:
 
