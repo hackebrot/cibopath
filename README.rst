@@ -193,3 +193,8 @@ rooms, and mailing lists is expected to follow the `PyPA Code of Conduct`_.
 .. _`Wikipedia: Chew Comic Book Series`: https://en.wikipedia.org/wiki/Chew_%28comics%29#Cibopath
 .. _`create a GitHub access token`: https://help.github.com/articles/creating-an-access-token-for-command-line-use/
 .. _`scopes`: https://developer.github.com/v3/oauth/#scopes
+
+John Layman Approves :)
+=======================
+
+.. image:: https://raw.github.com/hackebrot/cibopath/master/cibopath_twitter.png
