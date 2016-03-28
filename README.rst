@@ -178,6 +178,12 @@ License
 Distributed under the terms of the `BSD 3-Clause License`_, Cibopath is free
 and open source software
 
+.. image:: https://opensource.org/trademarks/osi-certified/web/osi-certified-120x100.png
+   :align: left
+   :alt: OSI certified
+   :target: https://opensource.org/
+
+
 Code of Conduct
 ===============
 
