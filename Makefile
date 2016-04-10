@@ -1,8 +1,9 @@
-.PHONY: clean-py clean-build develop test
+.PHONY: clean-tox clean-py clean-build develop test
 
 help:
 	@echo "clean-build - remove build artifacts"
 	@echo "clean-py - remove Python file artifacts"
+	@echo "clean-tox - remove tox file artifacts"
 	@echo "clean - remove all file artifacts"
 	@echo "develop - install development dependencies"
 	@echo "test - install dev dependencies and run tests"
