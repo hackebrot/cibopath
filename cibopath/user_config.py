@@ -10,6 +10,7 @@ logger = logging.getLogger('cibopath')
 class UserConfig:
     def __init__(self, file_path):
         self.file_path = pathlib.Path(file_path).expanduser()
+        self.file_path.touch(exist_ok=True)
         self._config = self._load_config()
 
     @property
