@@ -6,6 +6,12 @@ import json
 
 import aiohttp
 
+from .exceptions import (
+    CibopathException,
+    CookiecutterContextError,
+    GetRequestError,
+)
+
 logger = logging.getLogger('cibopath')
 
 API_ROOT = 'https://api.github.com/'
@@ -19,7 +25,8 @@ async def get(client, url, *, headers=None):
         headers = {}
 
     async with client.get(url, headers=headers) as response:
-        assert response.status == 200, response.reason + url
+        if response.status != 200:
+            raise GetRequestError(response.reason + url)
         content = await response.read()
         return content.decode()
 
@@ -33,7 +40,12 @@ async def get_cookiecutter_json(semaphore, client, user, repo):
             content = await get(client, url, headers=headers)
             json_content = json.loads(content)
             decoded = base64.b64decode(json_content['content']).decode()
-            return json.loads(decoded)
+            try:
+                return json.loads(decoded)
+            except json.decoder.JSONDecodeError:
+                raise CookiecutterContextError(
+                    'Cannot decode cookiecutter.json of {}'.format(url)
+                )
 
 
 async def get_readme(semaphore, client, user, repo):
@@ -59,7 +71,7 @@ async def get_template(semaphore, client, link):
         )
         logger.debug('{}/{} README'.format(user, repo))
         readme = await get_readme(semaphore, client, user, repo)
-    except AssertionError:
+    except CibopathException:
         logger.debug('{}/{} FAIL'.format(user, repo))
         return False
     else:
