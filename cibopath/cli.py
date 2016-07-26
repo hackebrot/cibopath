@@ -17,15 +17,24 @@ from cibopath.templates import dump, load
 @click.group()
 @click.pass_context
 @click.option(
-    '-v', '--verbose',
-    is_flag=True, help='Print debug information'
+    '-v',
+    '--verbose',
+    help='Print debug information',
+    is_flag=True,
 )
 @click.option(
-    '-c', '--config-file',
-    type=click.Path(), default='~/.cibopathrc',
-    help='Config file to hold settings'
+    '-c',
+    '--config-file',
+    default='~/.cibopathrc',
+    help='Config file to hold settings',
+    type=click.Path(),
 )
-@click.version_option(__version__, u'-V', u'--version', prog_name='cibopath')
+@click.version_option(
+    __version__,
+    '-V',
+    '--version',
+    prog_name='cibopath',
+)
 def cli(ctx, verbose, config_file):
     """Cibopath - Search Cookiecutters on GitHub."""
     logger = create_logger()
@@ -66,16 +75,16 @@ def _token(config):
 @click.option(
     '-u',
     '--username',
-    required=True,
     default=_username,
     envvar='CIBOPATH_USERNAME',
+    required=True,
 )
 @click.option(
     '-t',
     '--token',
-    required=True,
     default=_token,
     envvar='CIBOPATH_TOKEN',
+    required=True,
 )
 @click.option(
     '-d',
@@ -120,11 +129,21 @@ def _validate_variable(ctx, param, value):
 @cli.command('config')
 @click.pass_obj
 @click.option(
-    '--list', 'show_config', is_flag=True, default=False,
-    is_eager=True, expose_value=False, callback=_show_user_config
+    '--list',
+    'show_config',
+    callback=_show_user_config,
+    default=False,
+    expose_value=False,
+    is_eager=True,
+    is_flag=True,
 )
-@click.argument('variable', callback=_validate_variable)
-@click.argument('value')
+@click.argument(
+    'variable',
+    callback=_validate_variable,
+)
+@click.argument(
+    'value',
+)
 def config_cmd(config, variable, value):
     config.set_value(*variable, value)
 
@@ -141,11 +160,18 @@ def _validate_load_file(ctx, param, value):
 
 @cli.command('search')
 @click.option(
-    '-l', '--load-file',
-    required=True, default=_templates_file,
-    type=click.Path(), callback=_validate_load_file
+    '-l',
+    '--load-file',
+    callback=_validate_load_file,
+    default=_templates_file,
+    required=True,
+    type=click.Path(),
 )
-@click.argument('tags', type=click.STRING, nargs=-1)
+@click.argument(
+    'tags',
+    nargs=-1,
+    type=click.STRING,
+)
 def search_cmd(load_file, tags):
     logger = logging.getLogger('cibopath')
 
@@ -168,11 +194,17 @@ def search_cmd(load_file, tags):
 
 @cli.command('info')
 @click.option(
-    '-l', '--load-file',
-    required=True, default=_templates_file,
-    type=click.Path(), callback=_validate_load_file
+    '-l',
+    '--load-file',
+    callback=_validate_load_file,
+    default=_templates_file,
+    required=True,
+    type=click.Path(),
 )
-@click.argument('name', type=click.STRING)
+@click.argument(
+    'name',
+    type=click.STRING,
+)
 def info_cmd(load_file, name):
     logger = logging.getLogger('cibopath')
 
