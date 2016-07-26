@@ -3,6 +3,7 @@
 import logging
 import pathlib
 import json
+import re
 
 import click
 
@@ -27,14 +28,14 @@ from cibopath.templates import dump, load
 @click.version_option(__version__, u'-V', u'--version', prog_name='cibopath')
 def cli(ctx, verbose, config_file):
     """Cibopath - Search Cookiecutters on GitHub."""
-    ctx.obj = UserConfig(config_file)
-
     logger = create_logger()
     if verbose:
         logger.setLevel(logging.DEBUG)
         logger.debug('Logger initialized')
     else:
         logger.setLevel(logging.INFO)
+
+    ctx.obj = UserConfig(config_file)
 
 
 @click.pass_obj
@@ -62,16 +63,33 @@ def _token(config):
 
 
 @cli.command('update')
-@click.option('-u', '--username', required=True, default=_username)
-@click.option('-t', '--token', required=True, default=_token)
 @click.option(
-    '-d', '--dump-file',
-    required=True, default=_templates_file, type=click.Path()
+    '-u',
+    '--username',
+    required=True,
+    default=_username,
+    envvar='CIBOPATH_USERNAME',
+)
+@click.option(
+    '-t',
+    '--token',
+    required=True,
+    default=_token,
+    envvar='CIBOPATH_TOKEN',
+)
+@click.option(
+    '-d',
+    '--dump-file',
+    default=_templates_file,
+    envvar='CIBOPATH_TEMPLATES_FILE',
+    required=True,
+    type=click.Path(),
 )
 def update_cmd(username, token, dump_file):
     logger = logging.getLogger('cibopath')
     logger.debug('username: {}'.format(username))
-    logger.debug('token: {}'.format(token))
+
+    logger.debug('token: {}'.format(re.sub(r'\S', '*', token)))
 
     dump_file = pathlib.Path(dump_file).expanduser()
     dump_file.parent.mkdir(parents=True, exist_ok=True)
