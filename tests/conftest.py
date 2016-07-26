@@ -82,6 +82,13 @@ def mock_client_session(mocker):
     )
 
 
+@pytest.fixture(autouse=True)
+def unset_env_variables(monkeypatch):
+    monkeypatch.delenv('CIBOPATH_USERNAME', raising=False)
+    monkeypatch.delenv('CIBOPATH_TOKEN', raising=False)
+    monkeypatch.delenv('CIBOPATH_TEMPLATES_FILE', raising=False)
+
+
 @pytest.fixture(scope='session')
 def cli_runner():
     runner = CliRunner()
