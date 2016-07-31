@@ -94,7 +94,7 @@ def cli_runner():
     runner = CliRunner()
     cli_main = partial(runner.invoke, main)
     cli_main.__doc__ = 'Run cibopath cli main'
-    return partial(runner.invoke, main)
+    return cli_main
 
 
 @pytest.fixture
